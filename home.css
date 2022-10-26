@@ -13,3 +13,8 @@
     flex: 1;
     border: 1px solid black;
 }
+
+.carousel {
+    background-color: lightblue;
+    height: 500px;
+}
