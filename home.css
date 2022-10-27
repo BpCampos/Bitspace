@@ -20,8 +20,31 @@ main {
     border: 1px solid black;
 }
 
+.carousel-item {
+    width: 500px;
+}
+
 .products {
-    padding: 20px;
+    padding: 20px 0;
+}
+
+#carouselExampleControls {
+    border: 1px solid rgba(161, 161, 161, 0.541);
+    width: 100%;
+}
+
+.carousel-inner {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+}
+
+.carousel-control-prev {
+    background-color: rgba(112, 112, 112, 0.493);
+}
+
+.carousel-control-next {
+    background-color: rgba(112, 112, 112, 0.493);
 }
 
 .row-top, .row-bottom {
