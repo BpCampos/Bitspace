@@ -28,6 +28,10 @@ main {
   border: 1px solid black;
 }
 
+.navigation div:hover {
+  cursor: pointer;
+}
+
 .carousel-item {
   width: 500px;
 }
@@ -62,12 +66,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
-}
-
-.row-top img,
-.row-bottom img {
-  width: 200px;
+  justify-content: center;
+  gap: 30px;
 }
 
 .row-top p,
@@ -83,9 +83,8 @@ main {
   justify-content: end;
   padding: 10px;
   border-radius: 5px;
-  width: 16vw;
+  width: 300px;
   height: 50vh;
-  min-width: 220px;
   transition: 300ms;
   background-color: white;
 }
@@ -109,8 +108,9 @@ main {
   transform: scale(1.1);
 }
 
-.product-bottom-img img {
-  width: 90%;
+.product-bottom-img img,
+.product-top-img img {
+  width: 85%;
   height: 100%;
 }
 
@@ -126,6 +126,10 @@ main {
   margin-bottom: 40px;
   width: 100%;
   height: 40%;
+}
+
+.price {
+  font-size: 1.3rem;
 }
 
 .product-top-button,
@@ -151,4 +155,11 @@ main {
   transform: scale(1.03);
   font-size: 20px;
   background-color: rgb(172, 13, 13);
+  cursor: pointer;
+}
+
+@media (max-width: 1640px) {
+  .product-top,
+  .product-bottom {
+  }
 }
