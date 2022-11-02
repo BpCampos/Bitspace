@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="global.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/global.css" />
     <title>Header</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="container">
-        <div class="left-section">
-            <a href=""><img src="./image/logo-site.png" alt="Site logo"></a>
+      <div class="left-section">
+        <a href=""><img src="./image/logo-site.png" alt="Site logo" /></a>
+      </div>
+      <form class="middle-section">
+        <input type="search" placeholder="Pesquisar" id="search" />
+        <button type="submit">
+          <img src="./image/search.png" alt="search icon" />
+        </button>
+      </form>
+      <div class="right-section">
+        <div class="right-section-text">
+          <p class="conta">Minha conta</p>
+          <p class="login">Login/Cadastro</p>
         </div>
-        <form class="middle-section">
-            <input type="search" placeholder="Pesquisar" id="search">
-            <button type="submit"><img src="./image/search.png" alt="search icon"></button>
-        </form>
-        <div class="right-section">
-            <div class="right-section-text">
-                <p class="conta">Minha conta</p>
-                <p class="login">Login/Cadastro</p>
-            </div>
-            <img src="./image/shopping-cart.png" alt="shopping cart icon">
-        </div>
+        <img src="./image/shopping-cart.png" alt="shopping cart icon" />
+      </div>
     </header>
-</body>
+  </body>
 </html>
