@@ -6,15 +6,6 @@ main.container {
 main {
     font-family: 'Roboto', sans-serif;
 }
-
-.usuario {
-    transition: 300ms;
-}
-
-.usuario:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
 .top-info {
     display: inline-block;
     flex-wrap: nowrap; 
