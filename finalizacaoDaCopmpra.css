@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+main.container {
+    padding: 0;
+}
+main {
+    font-family: 'Roboto', sans-serif;
+}
+
+.usuario {
+    transition: 300ms;
+}
+
+.usuario:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.top-info {
+    display: inline-block;
+    flex-wrap: nowrap; 
+    flex-direction: row;
+    text-align: center; 
+    font-size: 1rem;
+    padding: 150px;
+    /* background-image: linear-gradient(180deg, #1d063af8 35%, #5c0dbdd0 90%); */
+    background-color: #F2F2F2;
+    height: 100%;
+    width: 100%;
+    color: #181818;
+    gap: 5px;
+}
+ /* main .top-info .image .material-symbols-outlined {
+    color: black;
+} */
+.image {
+    display: inline-block;
+    width: 15%;
+    height: 15%;
+    text-align: center; 
+    margin-top: 5px;
+    margin-bottom: 50px;
+    gap: 5px;
+}
+.button-left {
+    display: inline-block;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    font-weight: bold; 
+    margin-top: 10px;
+    width: 20%; 
+    height: 40px;
+    text-align: center;
+    color: black;
+    padding: 10px 0 0 0;
+    background-color: rgb(32, 198, 204);
+    margin-left: 350px;
+    transition: 300ms;
+ } 
+ .button-right {
+    display: inline-block;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    font-weight: bold; 
+    margin-top: 10px;
+    width: 20%; 
+    height: 40px;
+    text-align: center;
+    color: black;
+    padding: 10px 0 0 0;
+    background-color: #5c0dbdd0;
+    margin-left: 150px;
+    transition: 300ms;
+ } 
+.button-right:hover, .button-left:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
