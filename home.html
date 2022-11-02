@@ -1,189 +1,201 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="global.css"> 
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="global.css" />
     <title>Home</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="container">
-        <div class="left-section">
-            <a href=""><img src="./image/logo-site.png" alt="Site logo"></a>
+      <div class="left-section">
+        <a href=""><img src="./image/logo-site.png" alt="Site logo" /></a>
+      </div>
+      <form class="middle-section">
+        <input type="search" placeholder="Pesquisar" id="search" />
+        <button type="submit">
+          <img src="./image/search.png" alt="search icon" />
+        </button>
+      </form>
+      <div class="right-section">
+        <div class="right-section-text">
+          <p class="conta">Minha conta</p>
+          <p class="login">Login/Cadastro</p>
         </div>
-        <form class="middle-section">
-            <input type="search" placeholder="Pesquisar" id="search">
-            <button type="submit"><img src="./image/search.png" alt="search icon"></button>
-        </form>
-        <div class="right-section">
-            <div class="right-section-text">
-                <p class="conta">Minha conta</p>
-                <p class="login">Login/Cadastro</p>
-            </div>
-            <img src="./image/shopping-cart.png" alt="shopping cart icon">
-        </div>
+        <img src="./image/shopping-cart.png" alt="shopping cart icon" />
+      </div>
     </header>
     <main class="container">
-        <nav class="navigation">
-            <div>computador</div>
-            <div>componentes</div>
-            <div>periféricos</div>
-            <div>cadeiras</div>
-        </nav>
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./image/AMD RYZEN 9 7950X, GEFORCE RTX 4090 24GB, 32GB DDR5, SSD M.2 1TB.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./image/cadeira-gamer-amd-ryzen.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./image/cadeira-tgt-rgb.jpg" class="d-block w-100" alt="...">
-              </div>
+      <nav class="navigation">
+        <div>computador</div>
+        <div>componentes</div>
+        <div>periféricos</div>
+        <div>cadeiras</div>
+      </nav>
+      <div class="products">
+        <ul class="row-top">
+          <li class="product-top">
+            <div class="product-top-img">
+              <img src="./image/teclado-gamer-redragon.jpg" alt="" />
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        <div class="products">
-            <ul class="row-top">
-                <li class="product-top">
-                    <div class="product-top-img">
-                        <img src="./image/teclado-gamer-redragon.jpg" alt="">
-                    </div>
-                    <div class="product-top-info">
-                        <p>Teclado Mecânico Gamer Redragon Kumara, RGB, Switch Outemu Brown</p>
-                        <p>R$ 229,99</p>
-                    </div>
-                    <div class="product-top-button">
-                        <a href=""><button>Comprar</button></a>
-                    </div>
-                </li>
-                <li class="product-top">
-                    <div class="product-top-img">
-                        <img src="./image/mouse-gamer-redragon-cobra-chroma-rgb-12400dpi-7-botoes-preto-m711-v2_1656018617_m.jpg" alt="">
-                    </div>
-                    <div class="product-top-info">
-                        <p>Mouse Gamer Redragon Cobra, Chroma RGB, 12400DPI, 7 Botões, Preto</p>
-                        <p>R$ 116,99</p>
-                    </div>
-                    <div class="product-top-button">
-                        <a href=""><button>Comprar</button></a>
-                    </div>
-                </li>
-                <li class="product-top">
-                    <div class="product-top-img">
-                        <img src="./image/pc-gamer-concordia-processador-core-i5-10400f-rgb-geforce-gtx1650-8gb-ssd-480gb-preto-32726_1661526159_m.jpg" alt="">
-                    </div>
-                    <div class="product-top-info">
-                        <p>PC Gamer Concórdia Processador Core i5-10400F, RGB, Geforce GTX1650, 8GB, SSD 480GB, Preto</p>
-                        <p>R$ 4.499,99</p>
-                    </div>
-                    <div class="product-top-button">
-                        <a href=""><button>Comprar</button></a>
-                    </div>
-                </li>
-                <li class="product-top">
-                    <div class="product-top-img">
-                        <img src="./image/placa-de-video-zotac-gaming-nvidia-geforce-rtx-2060-6gb-gddr6-zt-t20600h-10m_1582213398_m.jpg" alt="">
-                    </div>
-                    <div class="product-top-info">
-                        <p>Placa de Vídeo Zotac Gaming NVIDIA GeForce RTX 2060, 6GB, GDDR6 - ZT-T20600H-10M</p>
-                        <p>R$ 1.599,99</p>
-                    </div>
-                    <div class="product-top-button">
-                        <a href=""><button>Comprar</button></a>
-                    </div>
-                </li>
-                <li class="product-top">
-                    <div class="product-top-img">
-                        <img src="./image/processador-intel-core-i3-10100f-cache-6mb-4-30-ghz-lga-1200-i3-10100f_1603394030_g.jpg" alt="">
-                    </div>
-                    <div class="product-top-info">
-                        <p>Processador Intel Core i3-10100F, 3.6GHz (4.3GHz Max Boost), Cache 6MB, Quad Core, 8 Threads, LGA 1200</p>
-                        <p>R$ 529,99</p>
-                    </div>
-                    <div class="product-top-button">
-                        <a href=""><button>Comprar</button></a>
-                    </div>
-                </li>
-            </ul>
-            <ul class="row-bottom">
-                <li class="product-bottom">
-                    <div class="product-bottom-img">
-                        <img src="./image/cadeira-tgt-rgb.jpg" alt="">
-                    </div>
-                    <div class="product-bottom-info">
-                        <p>CADEIRA GAMER TGT HERON, RGB, PRETO, TGT-HR-RGB01</p>
-                        <p>R$789,90</p>
-                    </div>
-                    <div class="product-bottom-button">
-                        <a href=""><button>Comprar</button></a>
-                    </div>
-                </li>
-                <li class="product-bottom">
-                    <div class="product-bottom-img">
-                        <img src="./image/AMD RYZEN 9 7950X, GEFORCE RTX 4090 24GB, 32GB DDR5, SSD M.2 1TB.jpg" alt="">
-                    </div>
-                    <div class="product-bottom-info">
-                        <p>COMPUTADOR PICHAU GAMER YDALIR, AMD RYZEN 9 7950X, GEFORCE RTX 4090 24GB, 32GB DDR5, SSD M.2 1TB + SSD 960GB</p>
-                        <p>R$30.199,99</p>
-                    </div>
-                    <div class="product-bottom-button">
-                        <a href=""><button>Comprar</button></a>
-                    </div>
-                </li>
-                <li class="product-bottom">
-                    <div class="product-bottom-img">
-                        <img src="./image/cadeira-gamer-amd-ryzen.jpg" alt="">
-                    </div>
-                    <div class="product-bottom-info">
-                        <p>CADEIRA GAMER PICHAU DONEK S AMD, PRETA, PG-DNKS-AMD01</p>
-                        <p>R$1.239,90</p>
-                    </div>
-                    <div class="product-bottom-button">
-                        <a href=""><button>Comprar</button></a>
-                    </div>
-                </li>
-                <li class="product-bottom">
-                    <div class="product-bottom-img">
-                        <img src="./image/monitor-aigo-gw22.jpg" alt="">
-                    </div>
-                    <div class="product-bottom-info">
-                        <p>MONITOR AIGO G22W, 21.5 POL., VA, FHD, 5MS, 60HZ, VGA/HDMI, G22W</p>
-                        <p>R$759,90</p>
-                    </div>
-                    <div class="product-bottom-button">
-                        <a href=""><button>Comprar</button></a>
-                    </div>
-                </li>
-                <li class="product-bottom">
-                    <div class="product-bottom-img">
-                        <img src="./image/monitor-gamer-msi-optics.jpg" alt="">
-                    </div>
-                    <div class="product-bottom-info">
-                        <p>MONITOR GAMER MSI OPTIX G24C4 23.6" CURVO 1MS 144HZ FHD FREESYNC HDMI/DP</p>
-                        <p>R$1.390,99</p>
-                    </div>
-                    <div class="product-bottom-button">
-                        <a href=""><button>Comprar</button></a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+            <div class="product-top-info">
+              <p>
+                TECLADO MECÂNICO GAMER REDRAGON KUMARA, RGB, SWITCH OUTEMU BROWN
+              </p>
+              <p class="price">R$ 229,99</p>
+            </div>
+            <div class="product-top-button">
+              <a href=""><button>Comprar</button></a>
+            </div>
+          </li>
+          <li class="product-top">
+            <div class="product-top-img">
+              <img
+                src="./image/mouse-gamer-redragon-cobra-chroma-rgb-12400dpi-7-botoes-preto-m711-v2_1656018617_m.jpg"
+                alt="" />
+            </div>
+            <div class="product-top-info">
+              <p>
+                MOUSE GAMER REDRAGON COBRA, CHROMA RGB, 12400DPI, 7 BOTÕES,
+                PRETO
+              </p>
+              <p class="price">R$ 116,99</p>
+            </div>
+            <div class="product-top-button">
+              <a href=""><button>Comprar</button></a>
+            </div>
+          </li>
+          <li class="product-top">
+            <div class="product-top-img">
+              <img
+                src="./image/pc-gamer-concordia-processador-core-i5-10400f-rgb-geforce-gtx1650-8gb-ssd-480gb-preto-32726_1661526159_m.jpg"
+                alt="" />
+            </div>
+            <div class="product-top-info">
+              <p>
+                PC GAMER CONCÓRDIA PROCESSADOR CORE I5-10400F, RGB, GEFORCE
+                GTX1650, 8GB, SSD 480GB, PRETO
+              </p>
+              <p class="price">R$ 4.499,99</p>
+            </div>
+            <div class="product-top-button">
+              <a href=""><button>Comprar</button></a>
+            </div>
+          </li>
+          <li class="product-top">
+            <div class="product-top-img">
+              <img
+                src="./image/placa-de-video-zotac-gaming-nvidia-geforce-rtx-2060-6gb-gddr6-zt-t20600h-10m_1582213398_m.jpg"
+                alt="" />
+            </div>
+            <div class="product-top-info">
+              <p>
+                PLACA DE VÍDEO ZOTAC GAMING NVIDIA GEFORCE RTX 2060, 6GB, GDDR6
+                - ZT-T20600H-10M
+              </p>
+              <p class="price">R$ 1.599,99</p>
+            </div>
+            <div class="product-top-button">
+              <a href=""><button>Comprar</button></a>
+            </div>
+          </li>
+          <li class="product-top">
+            <div class="product-top-img">
+              <img
+                src="./image/processador-intel-core-i3-10100f-cache-6mb-4-30-ghz-lga-1200-i3-10100f_1603394030_g.jpg"
+                alt="" />
+            </div>
+            <div class="product-top-info">
+              <p>
+                PROCESSADOR INTEL CORE I3-10100F, 3.6GHZ (4.3GHZ MAX BOOST),
+                CACHE 6MB, QUAD CORE, 8 THREADS, LGA 1200
+              </p>
+              <p class="price">R$ 529,99</p>
+            </div>
+            <div class="product-top-button">
+              <a href=""><button>Comprar</button></a>
+            </div>
+          </li>
+        </ul>
+        <ul class="row-bottom">
+          <li class="product-bottom">
+            <div class="product-bottom-img">
+              <img src="./image/cadeira-tgt-rgb.jpg" alt="" />
+            </div>
+            <div class="product-bottom-info">
+              <p>CADEIRA GAMER TGT HERON, RGB, PRETO, TGT-HR-RGB01</p>
+              <p class="price">R$789,90</p>
+            </div>
+            <div class="product-bottom-button">
+              <a href=""><button>Comprar</button></a>
+            </div>
+          </li>
+          <li class="product-bottom">
+            <div class="product-bottom-img">
+              <img
+                src="./image/AMD RYZEN 9 7950X, GEFORCE RTX 4090 24GB, 32GB DDR5, SSD M.2 1TB.jpg"
+                alt="" />
+            </div>
+            <div class="product-bottom-info">
+              <p>
+                COMPUTADOR PICHAU GAMER YDALIR, AMD RYZEN 9 7950X, GEFORCE RTX
+                4090 24GB, 32GB DDR5, SSD M.2 1TB + SSD 960GB
+              </p>
+              <p class="price">R$30.199,99</p>
+            </div>
+            <div class="product-bottom-button">
+              <a href=""><button>Comprar</button></a>
+            </div>
+          </li>
+          <li class="product-bottom">
+            <div class="product-bottom-img">
+              <img src="./image/cadeira-gamer-amd-ryzen.jpg" alt="" />
+            </div>
+            <div class="product-bottom-info">
+              <p>CADEIRA GAMER PICHAU DONEK S AMD, PRETA, PG-DNKS-AMD01</p>
+              <p class="price">R$1.239,90</p>
+            </div>
+            <div class="product-bottom-button">
+              <a href=""><button>Comprar</button></a>
+            </div>
+          </li>
+          <li class="product-bottom">
+            <div class="product-bottom-img">
+              <img src="./image/monitor-aigo-gw22.jpg" alt="" />
+            </div>
+            <div class="product-bottom-info">
+              <p>
+                MONITOR AIGO G22W, 21.5 POL., VA, FHD, 5MS, 60HZ, VGA/HDMI, G22W
+              </p>
+              <p class="price">R$759,90</p>
+            </div>
+            <div class="product-bottom-button">
+              <a href=""><button>Comprar</button></a>
+            </div>
+          </li>
+          <li class="product-bottom">
+            <div class="product-bottom-img">
+              <img src="./image/monitor-gamer-msi-optics.jpg" alt="" />
+            </div>
+            <div class="product-bottom-info">
+              <p>
+                MONITOR GAMER MSI OPTIX G24C4 23.6" CURVO 1MS 144HZ FHD FREESYNC
+                HDMI/DP
+              </p>
+              <p class="price">R$1.390,99</p>
+            </div>
+            <div class="product-bottom-button">
+              <a href=""><button>Comprar</button></a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </main>
-</body>
+  </body>
 </html>
