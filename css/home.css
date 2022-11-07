@@ -32,32 +32,8 @@ main {
   cursor: pointer;
 }
 
-.carousel-item {
-  width: 500px;
-}
-
 .products {
-  padding: 20px 0;
-}
-
-#carouselExampleControls {
-  border: 1px solid rgba(161, 161, 161, 0.541);
-  width: 100%;
-}
-
-.carousel-inner {
-  max-width: 1800px;
-  width: 100%;
-  display: flex;
-  justify-content: start;
-}
-
-.carousel-control-prev {
-  background-color: rgba(112, 112, 112, 0.493);
-}
-
-.carousel-control-next {
-  background-color: rgba(112, 112, 112, 0.493);
+  margin-bottom: 30px;
 }
 
 .row-top,
@@ -152,7 +128,6 @@ main {
 .product-bottom-button button:hover,
 .product-top-button button:hover {
   transform: scale(1.03);
-  font-size: 20px;
   background-color: rgb(172, 13, 13);
   cursor: pointer;
 }
