@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+main.container {
+  padding: 0;
+}
+main {
+  font-family: "Roboto", sans-serif;
+}
+h3 {
+  margin-top: 50px;
+  margin-left: 300px;
+  font-weight: bold;
+}
+.middle-info {
+  margin-top: 50px;
+  margin-left: 200px;
+
+}
+.middle-info {
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.image {
+  display: inline;
+  width: 20px;
+  height: 20px;
+}
+.bt-left img {
+  width: 15px;
+  height: 15px;
+}
+.middle-info .image p {
+  display: inline;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-weight: bold;
+}
+.content-middle { 
+  border: salmon; 
+  background-color: #f2f2f2;
+  /* display: flex;
+  flex-direction: column; 
+   width: 70%;
+  padding: 50px; */
+  margin-left: 180px;
+  margin-right: 180px;
+} 
+ .row {
+  display: flex;
+  flex-direction: row;  
+  padding: 50px 50px;  
+  background-color: #f2f2f2;
+  gap: 30px;
+  width: 100%;
+  justify-content:space-evenly;
+  font-weight: bold;
+} 
+.bt-right {
+  display: inline-block;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 20%;
+  height: 40px;
+  text-align: center;
+  color: black;
+  padding: 10px 0 0 0;
+  margin-left: 900px;
+  /* margin-bottom: 130px; */
+  /* margin-top: 0px; */
+  background-color: #f2f2f2;
+  border: solid #181818;
+  transition: 300ms;
+}
+.bt-left {
+  display: inline-block;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 20%;
+  height: 40px;
+  text-align: center;
+  color: black;
+  padding: 10px 0 0 0;
+  margin-left: 100px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+.bt-right:hover, .bt-left:hover, 
+.button-left:hover, .button-middle:hover, 
+.button-right:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.button-left, .button-middle, .button-right {
+  display: inline-block;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 15%;
+  height: 30px;
+  text-align: center;
+  color: black;
+  padding: 10px 0 0 0; 
+}
+.button-left {
+  margin-left: 90px;
+}
+.button-middle {
+  margin-left: 250px;
+}
+.button-right {
+  margin-left: 200px;
+}
+  

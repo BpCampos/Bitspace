@@ -6,15 +6,6 @@ main.container {
 main {
   font-family: "Roboto", sans-serif;
 }
-
-.usuario {
-  transition: 300ms;
-}
-
-.usuario:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
 .top-info {
   display: flex;
   flex-wrap: nowrap;
@@ -36,9 +27,6 @@ main {
   width: 50px;
   height: 50px;
 }
-/* main .top-info .image .material-symbols-outlined {
-    color: black;
-} */
 .image {
   display: inline-block;
   width: 15%;
@@ -58,7 +46,7 @@ main {
   color: black;
   padding: 10px 0 0 0;
   background-color: rgb(32, 198, 204);
-  margin-left: 350px;
+  margin-left: 340px;
   transition: 300ms;
 }
 .button-right {
@@ -73,7 +61,7 @@ main {
   color: black;
   padding: 10px 0 0 0;
   background-color: #5c0dbdd0;
-  margin-left: 150px;
+  margin-left: 135px;
   transition: 300ms;
 }
 .button-right:hover,

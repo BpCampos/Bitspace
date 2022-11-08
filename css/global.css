@@ -98,3 +98,41 @@ header {
 }
 
 /* Footer */
+footer {
+  margin-top: 30px;
+  max-width: 1920px;
+  width: 100%;
+  background-color: #37cfff;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-weight: bold;
+  color: white;
+  font-size: 1cm;
+}
+.navigation-footer {
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-around;
+  background-image: linear-gradient(180deg, #1d063af8 35%, #5c0dbdd0 90%);
+  height: 100%;
+  color: white;
+}
+
+.navigation-footer div {
+  padding: 20px 0;
+  text-align: center;
+  flex: 1;
+  border: 1px solid black;
+}
+
+.navigation-footer div:hover {
+  cursor: pointer;
+}
