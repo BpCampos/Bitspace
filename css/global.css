@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 /* Header */
-
 .container {
   max-width: 1920px;
   width: 100%;
@@ -49,6 +48,8 @@ header {
 .middle-section button {
   width: 40px;
   height: 40px;
+  background-color: transparent;
+  border: none;
 }
 
 .middle-section img:hover {
@@ -56,7 +57,8 @@ header {
 }
 
 .middle-section img {
-  padding: 4px;
+  padding: 0px;
+  width: 100%;
 }
 
 .right-section {
@@ -71,19 +73,13 @@ header {
   font-size: 1.1rem;
 }
 
-.conta {
-  transition: 300ms;
-}
-
-.conta:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
+.conta,
 .login {
   transition: 300ms;
+  margin: 0;
 }
 
+.conta:hover,
 .login:hover {
   transform: scale(1.05);
   cursor: pointer;
