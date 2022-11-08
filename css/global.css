@@ -112,11 +112,15 @@ footer .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   font-weight: bold;
   color: white;
   font-size: 1cm;
 }
+
+.container h1 {
+  font-size: 2rem;
+}
+
 .navigation-footer {
   display: flex;
   font-size: 2rem;
