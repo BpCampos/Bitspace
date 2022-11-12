@@ -50,6 +50,7 @@ header {
   height: 40px;
   background-color: transparent;
   border: none;
+  padding: 5px;
 }
 
 .middle-section img:hover {
