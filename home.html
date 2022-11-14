@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/glide.core.css" />
+    <link rel="stylesheet" href="./css/glide.theme.css" />
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/global.css" />
     <title>Home</title>
@@ -35,6 +36,23 @@
         <div>periféricos</div>
         <div>cadeiras</div>
       </nav>
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img
+                src="./image/processador-intel-core-i3-10100f-cache-6mb-4-30-ghz-lga-1200-i3-10100f_1603394030_g.jpg"
+                alt="" />
+            </li>
+            <li class="glide__slide"><img src="./image/cadeira-tgt-rgb.jpg" alt="" /></li>
+            <li class="glide__slide"><img src="./image/monitor-gamer-msi-optics.jpg" alt="" /></li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+        </div>
+      </div>
       <div class="products">
         <ul class="row-top">
           <li class="product-top">
@@ -182,20 +200,22 @@
           </li>
         </ul>
       </div>
-    </main>
+      <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
 
+      <script>
+        new Glide(".glide").mount();
+      </script>
+    </main>
     <footer>
       <nav class="navigation-footer">
-          <div>SAC</div>
-          <div>Canal de Vendas</div>
-          <div>Política de Privacidade</div>
-          <div>Trabalhe Conosco</div>
-          
-        </nav>
+        <div>SAC</div>
+        <div>Canal de Vendas</div>
+        <div>Política de Privacidade</div>
+        <div>Trabalhe Conosco</div>
+      </nav>
       <div class="container">
-          
-          <h1>© Products Group 03 PI 2022 - Todos os direitos reservados</h1>
+        <h1>© Products Group 03 PI 2022 - Todos os direitos reservados</h1>
       </div>
-  </footer>
+    </footer>
   </body>
 </html>

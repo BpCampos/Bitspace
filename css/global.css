@@ -1,144 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 /* Header */
-
 .container {
-    max-width: 1920px;
-    width: 100%;
-    margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 header {
-    display: flex;
-    height: 100%;
-    background-color: #37CFFF;
-    justify-content: space-between;
-    font-family: 'Roboto', sans-serif;
+  display: flex;
+  height: 100%;
+  background-color: #37cfff;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
 }
 
 .left-section {
-    flex: .7;
+  flex: 0.7;
 }
 
 .left-section img {
-    width: 90px;
-    margin-left: 80px;
+  width: 90px;
+  margin-left: 80px;
 }
 
 .left-section img {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .middle-section {
-    display: flex;
-    flex: 2;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex: 2;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #search {
-    height: 40px;
-    flex: .5;
-    border-radius: 20px;
-    width: 0;
-    font-size: 20px;
-    padding-left: 15px;
+  height: 40px;
+  flex: 0.5;
+  border-radius: 20px;
+  width: 0;
+  font-size: 20px;
+  padding-left: 15px;
 }
 
 .middle-section button {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
 }
 
 .middle-section img:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .middle-section img {
-    padding: 4px;
+  padding: 0px;
+  width: 100%;
 }
 
 .right-section {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .right-section-text {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
-.conta {
-    transition: 300ms;
-}
-
-.conta:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
+.conta,
 .login {
-    transition: 300ms;    
+  transition: 300ms;
+  margin: 0;
 }
 
+.conta:hover,
 .login:hover {
-    transform: scale(1.05);
-    cursor: pointer;    
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .right-section img {
-    margin-right: 40px;
-    width: 60px;
-    height: 60px;
-    transition: 300ms;
+  margin-right: 40px;
+  width: 60px;
+  height: 60px;
+  transition: 300ms;
 }
 
 .right-section img:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+  transform: scale(1.1);
+  cursor: pointer;
 }
-
 
 /* Footer */
 footer {
-    margin-top: 30px;
-    max-width: 1920px;
-    width: 100%;
-    background-color: #37CFFF;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-
+  margin-top: 30px;
+  max-width: 1920px;
+  width: 100%;
+  background-color: #37cfff;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 
 footer .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-weight: bold;
-    color: white;
-    font-size: 1cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-size: 1cm;
 }
-  .navigation-footer {
-    display: flex;
-    font-size: 2rem;
-    justify-content: space-around;
-    background-image: linear-gradient(180deg,#5c0dbdd0 35%, #1d063af8 90% );
-    height: 100%;
-    color: white;
-  }
-  
-  .navigation-footer div {
-    padding: 20px 0;
-    text-align: center;
-    flex: 1;
-    border: 1px solid black;
-  }
-  
-  .navigation-footer div:hover {
-    cursor: pointer;
-  }
+
+.container h1 {
+  font-size: 2rem;
+}
+
+.navigation-footer {
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-around;
+  background-image: linear-gradient(180deg, #1d063af8 35%, #5c0dbdd0 90%);
+  height: 100%;
+  color: white;
+}
+
+.navigation-footer div {
+  padding: 20px 0;
+  text-align: center;
+  flex: 1;
+  border: 1px solid black;
+}
+
+.navigation-footer div:hover {
+  cursor: pointer;
+}
