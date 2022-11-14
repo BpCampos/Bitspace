@@ -1,0 +1,17 @@
+.cadastro-usuario {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    width: 500px;
+    margin-left: 650px;
+
+
+}
+
+.start-cadastro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

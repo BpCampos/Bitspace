@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="stylesheet" href="./css/Pagina-Cadastro.css"/>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <title>Header</title>
+  </head>
+  <body>
+    <header class="container">
+      <div class="left-section">
+        <a href=""><img src="./image/logo-site.png" alt="Site logo" /></a>
+      </div>
+      <form class="middle-section">
+        <input type="search" placeholder="Pesquisar" id="search" />
+        <button type="submit">
+          <img src="./image/search.png" alt="search icon" />
+        </button>
+      </form>
+      <div class="right-section">
+        <div class="right-section-text">
+          <p class="conta">Minha conta</p>
+          <p class="login">Login/Cadastro</p>
+        </div>
+        <img src="./image/shopping-cart.png" alt="shopping cart icon" />
+      </div>
+    </header>
+  <div class="cadastro-usuario">
+    <form class="start-cadastro">
+        <h1>Crie sua conta</h1> 
+
+          <div class="input-cadastro">
+              <label for="nome">nome</label>
+              <input type="text" name="nome" id="nome" placeholder="Nome">
+          </div>
+
+          <div class="input-cadastro">
+              <label for="sobrenome">Sobrenome</label>
+              <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
+          </div>
+
+          <div class="input-cadastro">
+               <label for="pessoa">Quero me cadastrar como:</label>
+               <select name="pessoa" id="pessoa">
+                <option value="1">Pessoa Física</option>
+                <option value="2">Pessoa Jurídica</option>
+               </select>
+          </div>
+
+          <div class="input-cadastro">
+              <label for="cpf">CPF</label>
+              <input type="text" name="cpf" id="cpf" placeholder="Digite seu Cpf">
+          </div>
+
+          <div class="input-cadastro">
+              <label for="RG">RG</label>  
+              <input type="text" name="RG" id="RG" placeholder="Digite seu RG">
+          </div>
+
+          <div class="input-cadastro">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="Digite seu melhor email">
+          </div>
+          
+          <div class="input-cadastro">
+              <label for="senha">Senha</label>
+              <input type="password" name="senha" id="senha" placeholder="senha">
+
+          </div>
+
+
+          <div class="checkbox-cadastro">
+            <input type="checkbox" name="promoções" id="promoções">
+            <label for="promoções">Aceito receber as promoções da loja pro e-mail</label>
+
+            <input type="checkbox" name="aceite" id="aceite">
+            <label for="aceite">Aceito os termos da loja</label>
+
+        </div>
+
+      </div>
+
+    </form>
+  </body>
+</html>
