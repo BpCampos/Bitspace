@@ -1,17 +1,78 @@
-.cadastro-usuario {
-    background-color: aqua;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 700px;
-    width: 500px;
-    margin-left: 650px;
 
-
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
 .start-cadastro {
+    margin: 150px auto;
+    width: 50%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #9B9B9B;
+    border: 1px solid #9B9B9B;
+    box-shadow: 2px 2px 7px 1px rgba(241, 86, 247, 0.116);
+    padding: 30px;
+    background-color: #514867;
+}
+
+.input-cadastro input {
+    border: 1px solid #ffffff;
+    height: 26px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.input-cadastro {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.start-cadastro button{
+    width: 100%;
+    border: none;
+    background-color: #6e64e5;
+    color: white;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+
+    transition: .6s all;
+}
+
+.start-cadastro button:hover {
+    background-color: #6c63fe;
+    box-shadow: 2px 3px 3px 1px rgba(94, 19, 235, 0.48);
+}
+
+.input-cadastro input:focus {
+    outline: 2px solid #6e64e5;
+}
+
+.input-cadastro label {
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.checkbox-cadastro {
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-cadastro ::placeholder {
+    font-family: 'Roboto', sans-serif;
+}
+
+.start-cadastro h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    color: #6c63fe;
 }
