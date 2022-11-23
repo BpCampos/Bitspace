@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
+
+main {
+  font-family: Roboto, sans-serif;
+}
+
+.price-info li {
+  list-style: none;
+}
+
+.cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 840px;
+}
+
+.product-name {
+  width: 40%;
+  background-color: #d9d9d9;
+  padding: 5px;
+  margin-right: 100px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  background-color: #5cb8e4;
+}
+
+.product-info section {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.product-info section p,
+span {
+  font-size: 1.2rem;
+}
+
+.line {
+  border-bottom: 1px solid black;
+  margin: 10px 0;
+}
+
+.product-info section span {
+  margin-right: 30px;
+}
+
+.product-info section p span {
+  margin: 0px 5px;
+}
+
+.product-info section p button {
+  background-color: rgb(192, 192, 192);
+  padding: 5px 11px;
+  border-radius: 30px;
+}
+
+.frete {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.cep {
+  background-color: #5cb8e4;
+  padding: 9px 15px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.cep label {
+  display: block;
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
+
+#cep-number {
+  border: 1px solid black;
+}
+
+.frete button {
+  margin-left: 20px;
+  background-color: blueviolet;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1.4rem;
+}
+
+.price-info {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  background-color: #8758ff;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d9d9d9;
+  margin-bottom: 10px;
+  padding: 20px 10px;
+  border-radius: 15px;
+}
+
+.finish,
+.add-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-more {
+  font-weight: bold;
+  padding: 10px 0;
+  margin: 30px auto;
+  background-color: #d6dadb;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.finish {
+  font-weight: bold;
+  padding: 10px 0;
+  margin: 0px auto;
+  background-color: #118faf;
+  border-radius: 10px;
+  width: 80%;
+  color: white;
+}
