@@ -1,45 +1,41 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
-body {
-  padding: 0;
-  margin: 0;
-  background-color: whitesmoke;
-}
-
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
+body,
 main.container {
   padding: 0;
 }
-
-main {
-  font-family: "Roboto", sans-serif;
+.navigation,
+.product-bottom-button button,
+.product-top-button button {
+  background-image: linear-gradient(180deg, #1d063af8 35%, #5c0dbdd0 90%);
+  color: #fff;
 }
-
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+}
+main {
+  font-family: Roboto, sans-serif;
+}
 .navigation {
   display: flex;
   font-size: 2rem;
   justify-content: space-around;
-  background-image: linear-gradient(180deg, #1d063af8 35%, #5c0dbdd0 90%);
   height: 100%;
-  color: white;
 }
-
 .navigation div {
   padding: 20px 0;
   text-align: center;
   flex: 1;
-  border: 1px solid black;
+  border: 1px solid #000;
 }
-
 .navigation div:hover {
   cursor: pointer;
 }
-
 .products {
   padding: 20px 0;
 }
-
-.row-top,
-.row-bottom {
+.row-bottom,
+.row-top {
   margin-top: 0;
   display: flex;
   flex-wrap: wrap;
@@ -47,14 +43,12 @@ main {
   justify-content: space-around;
   padding: 0;
 }
-
-.row-top p,
-.row-bottom p {
+.row-bottom p,
+.row-top p {
   width: 300px;
 }
-
-.product-top,
-.product-bottom {
+.product-bottom,
+.product-top {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,84 +56,71 @@ main {
   padding: 10px;
   border-radius: 5px;
   width: 300px;
-  transition: 300ms;
-  background-color: white;
+  transition: 0.3s;
+  background-color: #fff;
   margin-top: 20px;
 }
-
 .product-bottom:hover,
 .product-top:hover {
-  box-shadow: 5px 5px 20px 10px rgb(199, 199, 199);
+  box-shadow: 5px 5px 20px 10px #c7c7c7;
 }
-
-.product-top-img,
-.product-bottom-img {
+.product-bottom-img,
+.product-top-img {
   margin-bottom: 20px;
   width: 100%;
   height: 50%;
   text-align: center;
-  transition: 300ms;
+  transition: 0.3s;
 }
-
-.product-top-img:hover,
-.product-bottom-img:hover {
+.product-bottom-img:hover,
+.product-top-img:hover {
   transform: scale(1.1);
 }
-
 .product-bottom-img img,
 .product-top-img img {
   width: 85%;
   height: 100%;
 }
-
-.product-top-info,
-.product-bottom-info {
-  font-weight: bold;
+.product-bottom-info,
+.product-top-info {
+  font-weight: 700;
   width: 100%;
   height: 29%;
 }
-
-.product-top-info p,
-.product-bottom-info p {
+.product-bottom-info p,
+.product-top-info p {
   margin-bottom: 40px;
   width: 100%;
   height: 40%;
   font-size: 1rem;
 }
-
-.product-top-info .price,
-.product-bottom-info .price {
+.product-bottom-info .price,
+.product-top-info .price {
   font-size: 1.2rem;
 }
-
 p.price {
   margin: 0;
 }
-
-.product-top-button,
-.product-bottom-button {
-  font-weight: bold;
+.product-bottom-button,
+.product-top-button {
+  font-weight: 700;
   margin-top: 5px;
   width: 100%;
   text-align: center;
-  color: white;
-  padding: 10px 0 0 0;
+  color: #fff;
+  padding: 10px 0 0;
 }
-
 .product-bottom-button button,
 .product-top-button button {
-  background-image: linear-gradient(180deg, #1d063af8 35%, #5c0dbdd0 90%);
   width: 100%;
   padding: 10px 0;
-  transition: 300ms;
-  color: white;
-  font-weight: bold;
+  transition: 0.3s;
+  font-weight: 700;
   font-size: 1rem;
 }
-
 .product-bottom-button button:hover,
 .product-top-button button:hover {
   transform: scale(1.03);
-  background-color: rgb(172, 13, 13);
+  background-color: #ac0d0d;
   cursor: pointer;
 }
