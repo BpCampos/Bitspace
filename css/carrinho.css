@@ -52,17 +52,23 @@ span {
   margin: 10px 0;
 }
 
+.product-info section p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .product-info section span {
   margin-right: 30px;
 }
 
 .product-info section p span {
-  margin: 0px 5px;
+  margin: 5px 5px 0 10px;
+  font-size: 1.4rem;
 }
 
-.product-info section p button {
+.product-info section p button span {
   background-color: rgb(192, 192, 192);
-  padding: 5px 11px;
   border-radius: 30px;
 }
 
