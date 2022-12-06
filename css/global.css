@@ -65,9 +65,30 @@ header {
 .right-section {
   flex: 1;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+.hamburguer {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 38px;
+  height: 8px;
+  margin: 5px auto;
+  background-color: black;
+}
+
+.nav-item {
+  transition: 300ms;
+  display: none;
+}
+
+.nav-item:hover {
+  font-size: 1.2rem;
 }
 
 .right-section-text {
@@ -140,4 +161,51 @@ footer .container {
 
 .navigation-footer div:hover {
   cursor: pointer;
+}
+
+@media (max-width: 740px) {
+  .middle-section {
+    flex: 3;
+  }
+
+  .right-section-text,
+  .right-section img {
+    display: none;
+  }
+
+  .right-section {
+    justify-content: center;
+  }
+
+  .hamburguer {
+    display: block;
+  }
+
+  .hamburguer-nav {
+    position: absolute;
+    right: 0;
+    top: -100%;
+    gap: 0;
+    flex-direction: column;
+    background-color: #37cfff;
+    width: 30%;
+    text-align: center;
+    transition: 500ms;
+    z-index: 100;
+  }
+
+  .nav-item {
+    padding: 15px 0;
+    border: 1px solid black;
+    display: block;
+  }
+
+  .hamburguer-nav.active {
+    top: 70px;
+  }
+
+  .hamburguer.active {
+    opacity: 0.5;
+    transition: 1s;
+  }
 }
