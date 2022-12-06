@@ -83,8 +83,8 @@ header {
 }
 
 .nav-item {
-  transition: 300ms;
   display: none;
+  transition: 300ms;
 }
 
 .nav-item:hover {
@@ -184,7 +184,7 @@ footer .container {
   .hamburguer-nav {
     position: absolute;
     right: 0;
-    top: -100%;
+    top: 93px;
     gap: 0;
     flex-direction: column;
     background-color: #37cfff;
@@ -192,6 +192,7 @@ footer .container {
     text-align: center;
     transition: 500ms;
     z-index: 100;
+    opacity: 0;
   }
 
   .nav-item {
@@ -201,11 +202,11 @@ footer .container {
   }
 
   .hamburguer-nav.active {
-    top: 70px;
+    opacity: 100;
   }
 
   .hamburguer.active {
     opacity: 0.5;
-    transition: 1s;
+    transition: 500ms;
   }
 }
