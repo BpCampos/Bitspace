@@ -74,6 +74,11 @@ header {
   cursor: pointer;
 }
 
+.hamburguer-nav {
+  transition: 500ms;
+  display: none;
+}
+
 .bar {
   display: block;
   width: 38px;
@@ -89,6 +94,7 @@ header {
 
 .nav-item:hover {
   font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .right-section-text {
@@ -190,13 +196,13 @@ footer .container {
     background-color: #37cfff;
     width: 30%;
     text-align: center;
-    transition: 500ms;
     z-index: 100;
     opacity: 0;
+    display: block;
   }
 
   .nav-item {
-    padding: 15px 0;
+    padding: 20px 0;
     border: 1px solid black;
     display: block;
   }
@@ -207,6 +213,6 @@ footer .container {
 
   .hamburguer.active {
     opacity: 0.5;
-    transition: 500ms;
+    transition: 300ms;
   }
 }
