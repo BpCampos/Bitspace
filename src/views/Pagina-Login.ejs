@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/Pagina-Login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <%- include('./components/header.ejs') %>
+
+    <div class="main-login">
+      <div class="left-login">
+        <img src="./image/undraw_Access_account_re_8spm 1.svg" class="left-img" alt="Img de login" />
+      </div>
+      <div class="right-login">
+        <div class="card-login">
+          <h1>LOGIN</h1>
+          <div class="textfield">
+            <label for="usuario">Usuário</label>
+            <input type="text" name="usuario" id="usuario" placeholder="Usuário" />
+          </div>
+
+          <div class="textfield">
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" placeholder="Senha" />
+          </div>
+          <button class="btn-login">Login</button>
+        </div>
+      </div>
+    </div>
+
+    <%- include('./components/footer.ejs') %>
+  </body>
+</html>

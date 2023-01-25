@@ -7,27 +7,10 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/detalhe-produto.css" />
-    <title>Document</title>
+    <title>Detalhe produto</title>
   </head>
   <body>
-    <header class="container">
-      <div class="left-section">
-        <a href="home.html"><img src="./image/logo-site.png" alt="Site logo" /></a>
-      </div>
-      <form class="middle-section">
-        <input type="search" placeholder="Pesquisar" id="search" />
-        <button type="submit">
-          <img src="./image/search.png" alt="search icon" />
-        </button>
-      </form>
-      <div class="right-section">
-        <div class="right-section-text">
-          <p class="conta">Minha conta</p>
-          <p class="login">Login/Cadastro</p>
-        </div>
-        <img src="./image/shopping-cart.png" alt="shopping cart icon" />
-      </div>
-    </header>
+    <%- include('./components/header.ejs') %>
     <main class="container">
       <div class="box">
         <div class="first-section">
@@ -52,10 +35,7 @@
           </div>
           <div class="prod-desc">
             <div class="prod-name">
-              <span
-                >PC Gamer Concórdia Processador Core i5-10400F, RGB, Geforce GTX1650, 8GB, SSD
-                480GB, Preto</span
-              >
+              <span>PC Gamer Concórdia Processador Core i5-10400F, RGB, Geforce GTX1650, 8GB, SSD 480GB, Preto</span>
             </div>
             <div class="prod-price">
               <div>
@@ -88,6 +68,7 @@
           <span>Informações técnicas</span>
         </div>
       </div>
+      <%- include('./components/footer.ejs') %>
     </main>
   </body>
 </html>

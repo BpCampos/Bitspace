@@ -142,7 +142,7 @@ footer .container {
   align-items: center;
   font-weight: bold;
   color: white;
-  font-size: 1cm;
+  padding-bottom: 3px;
 }
 
 .container h1 {
