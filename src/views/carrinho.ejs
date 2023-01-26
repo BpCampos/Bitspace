@@ -7,33 +7,14 @@
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/carrinho.css" />
     <title>Carrinho</title>
   </head>
   <body>
-    <header class="container">
-      <div class="left-section">
-        <a href=""><img src="./image/logo-site.png" alt="Site logo" /></a>
-      </div>
-      <form class="middle-section">
-        <input type="search" placeholder="Pesquisar" id="search" />
-        <button type="submit">
-          <img src="./image/search.png" alt="search icon" />
-        </button>
-      </form>
-      <div class="right-section">
-        <div class="right-section-text">
-          <p class="conta">Minha conta</p>
-          <p class="login">Login/Cadastro</p>
-        </div>
-        <img src="./image/shopping-cart.png" alt="shopping cart icon" />
-      </div>
-    </header>
+    <%- include('./components/header.ejs') %>
+
     <main class="container">
       <div class="cart">
         <div class="product">
@@ -90,6 +71,7 @@
           <button class="finish">FINALIZAR</button>
         </div>
       </div>
+      <%- include('./components/footer.ejs') %>
     </main>
   </body>
 </html>
