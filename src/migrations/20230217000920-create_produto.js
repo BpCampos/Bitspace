@@ -12,31 +12,29 @@ module.exports = {
         autoIncrement: true,
       },
       name: {
-        type: Sequelize.STRING,
-        allowNull: false,
+        type: Sequelize.STRING(250),
+        allowNull: false
       },
-      email: {
-        type: Sequelize.STRING(100),
-        unique: true,
+      price: {
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
-      password: {
-        type: Sequelize.STRING,
-        allowNull: false,
+      description: {
+        type: Sequelize.STRING(500),
+        allowNull: false
       },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,
-        defaultValue: Sequelize.fn("now"),
       },
       updated_at: {
         type: Sequelize.DATE,
         allowNull: false,
-        defaultValue: Sequelize.fn("now"),
       },
     });
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("users");
+    await queryInterface.dropTable("produtos");
   },
 };
