@@ -96,7 +96,7 @@ main {
 }
 .button-left, .button-middle, .button-right {
   display: inline-block;
-  /* flex-wrap: nowrap; */
+  flex-wrap: nowrap;
   flex-direction: row;
   font-weight: bold;
   width: 15%;
