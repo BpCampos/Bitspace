@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path')
 const homeRouter = require('./routes/homeRouter')
+const authRouter = require('./routes/authRouter')
 
 const app = express();
 const port = 4000;
@@ -14,6 +15,7 @@ app.use(express.static(path.resolve('src', 'public')))
 
 //* Rotas
 app.use(homeRouter);
+app.use(authRouter);
 
 
 app.listen(port, () => console.log(`O servidor está rodando na porta ${port}`))
