@@ -24,52 +24,72 @@ main {
 
 .product-name {
   width: 40%;
-  background-color: #d9d9d9;
   padding: 5px;
   margin-right: 100px;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .product-info {
   display: flex;
   flex-direction: column;
-  background-color: #5cb8e4;
+  background-color: #fff;
 }
 
 .product-info section {
   display: flex;
   align-items: center;
   padding: 10px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.product-info section p,
-span {
-  font-size: 1.2rem;
+.product-info section img {
+  width: 250px;
 }
 
-.line {
-  border-bottom: 1px solid black;
-  margin: 10px 0;
+.bottom-section {
+  background-color: #291e46;
+  border-radius: 10px;
 }
 
-.product-info section p {
+.bottom-section p {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+
+.bottom-section button span {
+  background-color: rgb(165, 165, 165);
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.bottom-section button {
+  margin-right: -20px;
+  margin-left: -15px;
+}
+
+.bottom-section input {
+  font-size: 1.5rem;
+  width: 7%;
+  background: transparent;
+  color: white;
+}
+
+.bottom-section p,
+span {
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 
 .product-info section span {
   margin-right: 30px;
-}
-
-.product-info section p span {
-  margin: 5px 5px 0 10px;
   font-size: 1.4rem;
 }
 
-.product-info section p button span {
-  background-color: rgb(192, 192, 192);
-  border-radius: 30px;
+.product-info section button:hover {
+  cursor: pointer;
 }
 
 .frete {
@@ -80,16 +100,19 @@ span {
 }
 
 .cep {
-  background-color: #5cb8e4;
+  background-color: #291e46;
   padding: 9px 15px;
   border-radius: 15px;
   text-align: center;
+  color: white;
 }
 
 .cep label {
   display: block;
   margin-bottom: 8px;
   margin-right: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 #cep-number {
@@ -98,10 +121,11 @@ span {
 
 .frete button {
   margin-left: 20px;
-  background-color: blueviolet;
+  background-color: #291e46;
   padding: 15px;
   border-radius: 5px;
   font-size: 1.4rem;
+  color: white;
 }
 
 .price-info {
@@ -109,10 +133,11 @@ span {
   flex-direction: column;
   width: 30%;
   height: 100%;
-  background-color: #8758ff;
+  background-color: #291e46;
   padding: 15px;
   border-radius: 15px;
   max-width: 500px;
+  font-weight: bold;
 }
 
 .info {
@@ -139,6 +164,10 @@ span {
   background-color: #d6dadb;
   border-radius: 10px;
   width: 80%;
+}
+
+.add-more:hover {
+  cursor: pointer;
 }
 
 .finish {
