@@ -1,9 +1,12 @@
-
+const { Product } = require('../models')
 
 const homeController = {
 
-    showHome: (req, res) => {
-        res.render('home')
+    showHome: async (req, res) => {
+
+        const produtos = await Product.findAll()
+
+        res.render('home', { produtos })
     },
 
     showCarrinho: (req, res) => {
