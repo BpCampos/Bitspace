@@ -9,12 +9,22 @@ const homeController = {
         res.render('home', { produtos })
     },
 
-    showCarrinho: (req, res) => {
-        res.render('carrinho')
+    showCarrinho: async (req, res) => {
+
+        const { id } = req.params
+
+        const produto = await Product.findByPk(id)
+
+        res.render('carrinho', { produto })
     },
 
-    showDetalheProduto: (req, res) => {
-        res.render('detalhe-produto')
+    showDetalheProduto: async (req, res) => {
+
+        const { id } = req.params
+
+        const produto = await Product.findByPk(id)
+
+        res.render('detalhe-produto', { produto })
     },
 
     showFinalizacaoDaCompra: (req, res) => {

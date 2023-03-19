@@ -4,46 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/detalhe-produto.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/detalhe-produto.css" />
     <title>Detalhe produto</title>
   </head>
   <body>
-    <%- include('./components/header.ejs') %>
     <main class="container">
+      <%- include('./components/header.ejs') %>
       <div class="box">
         <div class="first-section">
           <div class="prod-img">
-            <img
-              src="./image/pc-gamer-concordia-processador-core-i5-10400f-rgb-geforce-gtx1650-8gb-ssd-480gb-preto-32726_1661526159_m.jpg"
-              alt="" />
-            <img
-              src="./image/pc-gamer-concordia-processador-core-i5-10400f-rgb-geforce-gtx1650-8gb-ssd-480gb-preto-32726_1661526159_m.jpg"
-              alt="" />
-            <img
-              src="./image/pc-gamer-concordia-processador-core-i5-10400f-rgb-geforce-gtx1650-8gb-ssd-480gb-preto-32726_1661526159_m.jpg"
-              alt="" />
-            <img
-              src="./image/pc-gamer-concordia-processador-core-i5-10400f-rgb-geforce-gtx1650-8gb-ssd-480gb-preto-32726_1661526159_m.jpg"
-              alt="" />
+            <img src="<%=produto.image%>" alt="" /> <img src="<%=produto.image%>" alt="" />
+            <img src="<%=produto.image%>" alt="" /> <img src="<%=produto.image%>" alt="" />
           </div>
-          <div class="prod">
-            <img
-              src="./image/pc-gamer-concordia-processador-core-i5-10400f-rgb-geforce-gtx1650-8gb-ssd-480gb-preto-32726_1661526159_m.jpg"
-              alt="" />
-          </div>
+          <div class="prod"><img src="<%=produto.image%>" alt="" /></div>
           <div class="prod-desc">
             <div class="prod-name">
-              <span>PC Gamer Concórdia Processador Core i5-10400F, RGB, Geforce GTX1650, 8GB, SSD 480GB, Preto</span>
+              <span><%=produto.name%></span>
             </div>
             <div class="prod-price">
               <div>
-                <span id="price">R$ 25000,00</span>
+                <span id="price"
+                  ><%=new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'
+                  }).format(produto.price)%></span
+                >
               </div>
               <div>
                 <span>Adicionar</span>
-                <img src="./image/shopping-cart.png" alt="" />
+                <a href="/carrinho/<%=produto.id%>"><img src="../image/shopping-cart.png" alt="" /></a>
               </div>
             </div>
             <div class="prod-inst">
