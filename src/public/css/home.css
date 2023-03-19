@@ -31,96 +31,70 @@ main {
 .navigation div:hover {
   cursor: pointer;
 }
-.products {
-  padding: 20px 0;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #fff;
+  gap: 1px;
+  width: 90%;
+  margin: 0 auto;
 }
-.row-bottom,
-.row-top {
-  margin-top: 0;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 0;
-}
-.row-bottom p,
-.row-top p {
-  width: 300px;
-}
-.product-bottom,
-.product-top {
+
+.card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: end;
-  padding: 10px;
-  border-radius: 5px;
-  width: 300px;
-  transition: 0.3s;
-  background-color: #fff;
-  margin-top: 20px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin: 50px auto;
+  font-weight: bold;
+  width: 80%;
+  padding: 30px;
+  transition: 300ms;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 3px #c7c7c7;
 }
-.product-bottom:hover,
-.product-top:hover {
+
+.card:hover {
   box-shadow: 5px 5px 20px 10px #c7c7c7;
-}
-.product-bottom-img,
-.product-top-img {
-  margin-bottom: 20px;
-  width: 100%;
-  height: 50%;
-  text-align: center;
-  transition: 0.3s;
-}
-.product-bottom-img:hover,
-.product-top-img:hover {
   transform: scale(1.1);
 }
-.product-bottom-img img,
-.product-top-img img {
-  width: 85%;
-  height: 100%;
+
+.card img {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
-.product-bottom-info,
-.product-top-info {
-  font-weight: 700;
-  width: 100%;
-  height: 29%;
+
+.description {
+  margin-bottom: 30px;
+  text-align: left;
+  line-height: 16px;
+  font-size: 0.9rem;
 }
-.product-bottom-info p,
-.product-top-info p {
-  margin-bottom: 40px;
-  width: 100%;
-  height: 40%;
-  font-size: 1rem;
+
+.price {
+  margin-bottom: 30px;
+  font-size: 1.4rem;
 }
-.product-bottom-info .price,
-.product-top-info .price {
-  font-size: 1.2rem;
+
+.card button {
+  background-image: linear-gradient(180deg, #1d063af8 35%, #5c0dbdd0 90%);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  transition: 300ms;
 }
-p.price {
-  margin: 0;
-}
-.product-bottom-button,
-.product-top-button {
-  font-weight: 700;
-  margin-top: 5px;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  padding: 10px 0 0;
-}
-.product-bottom-button button,
-.product-top-button button {
-  width: 100%;
-  padding: 10px 0;
-  transition: 0.3s;
-  font-weight: 700;
-  font-size: 1rem;
-}
-.product-bottom-button button:hover,
-.product-top-button button:hover {
+
+.card button:hover {
   transform: scale(1.03);
   background-color: #ac0d0d;
   cursor: pointer;
+}
+
+.card a {
+  width: 100%;
+}
+
+.card button {
+  width: 100%;
 }
