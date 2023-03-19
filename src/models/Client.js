@@ -34,6 +34,14 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER(50),
             allowNull: false
         },
+        logradouro: {
+            type: DataTypes.STRING(250),
+            allowNull: false
+        },
+        numero: {
+            type: DataTypes.INTEGER(250),
+            allowNull: false
+        },
         complemento: {
             type: DataTypes.INTEGER(250),
             allowNull: false
