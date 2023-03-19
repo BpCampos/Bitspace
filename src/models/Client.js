@@ -1,3 +1,5 @@
+
+
 module.exports = (sequelize, DataTypes) => {
     const Client = sequelize.define('Client', {
         id: {
@@ -30,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(250),
             allowNull: false
         },
-        cep: {
+        CEP: {
             type: DataTypes.INTEGER(50),
             allowNull: false
         },
