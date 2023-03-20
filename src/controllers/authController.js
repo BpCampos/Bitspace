@@ -27,13 +27,23 @@ const authController = {
         return res.redirect('/auth/cadastro-produto')
     },
 
+    showAlterarProduto: async (req, res) => {
+        const { id } = req.params
+
+        const produto = await Product.findByPk(id)
+
+        const categorias = await Category.findAll()
+
+        return res.render('./auth/alterar-produto', { categorias, produto })
+    },
+
     deleteProduto: async (req, res) => {
 
         const { id } = req.params
 
         await Product.destroy({ where: { id } })
 
-        return res.redirect('/listagem-produtos')
+        return res.redirect('/lista-produtos')
     }
 
 }

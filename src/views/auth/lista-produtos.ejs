@@ -42,9 +42,12 @@
             <p><%=produto.description%></p>
           </div>
           <div class="price"><%=produto.price%>R$</div>
-          <form class="product-top-button" method="POST" action="/auth/lista-produtos/<%=produto.id%>/delete?_method=DELETE" >
-            <button>Excluir</button>
-          </form>
+          <div class="product-buttons">
+            <form class="product-top-button" method="POST" action="/auth/lista-produtos/<%=produto.id%>/delete?_method=DELETE" >
+              <button>Excluir</button>
+            </form>
+            <a class="product-top-button" href="/auth/alterar-produto/<%=produto.id%>"><button>Alterar</button></a>
+          </div>  
         </li>
         <% }) %>
     </div>

@@ -302,3 +302,17 @@ main {
   background-color: rgb(172, 13, 13);
   cursor: pointer;
 }
+
+.product-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+
+.product-buttons a,
+.product-buttons form {
+  width: 80%;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
