@@ -31,8 +31,17 @@ const homeController = {
         res.render('finalizaçãoDaCompra')
     },
 
-    showListagemProduto: (req, res) => {
-        res.render('Listagem-Produtos')
+    showListagemProduto: async (req, res) => {
+
+        const { id } = req.params
+
+        const produtos = await Product.findAll({
+            where: {
+                category_id: id
+            }
+        })
+
+        res.render('Listagem-Produtos', { produtos })
     },
 
     showPaginaCadastro: (req, res) => {

@@ -163,7 +163,7 @@ main {
   color: white;
 }
 
-.navigation a {
+.navigation div {
   padding: 20px 0;
   text-align: center;
   flex: 1;
@@ -277,7 +277,8 @@ main {
   text-align: center;
 }
 
-.product-top-button {
+.product-top-button,
+.product-bottom-button {
   font-weight: bold;
   margin-top: 5px;
   width: 20%;
@@ -286,6 +287,7 @@ main {
   padding: 10px 0 0 0;
 }
 
+.product-bottom-button button,
 .product-top-button button {
   background-image: linear-gradient(180deg, #1d063af8 35%, #5c0dbdd0 90%);
   width: 100%;
@@ -293,6 +295,7 @@ main {
   transition: 300ms;
 }
 
+.product-bottom-button button:hover,
 .product-top-button button:hover {
   transform: scale(1.03);
   font-size: 20px;

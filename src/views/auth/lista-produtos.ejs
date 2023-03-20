@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/lista-produtos.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <%- include('../components/header.ejs') %>
+<main class="container">
+      <nav class="navigation">
+        <div>Computador</div>
+        <div>Componentes</div>
+        <div>Periféricos</div>
+        <div>Cadeiras</div>
+      </nav>
+
+
+<!-- <ul class="Barra-lateral">
+    <p><h1>Computadores</h1></p>
+<li>
+    <div>Notebooks</div>
+    <div>Desktop</div>
+    <div>Monitor</div>
+    <div>Mouse</div>
+    <div>Gamepad</div>
+    <div>Speakers</div>
+</li>
+</ul> -->
+<div class="listagem-produtos">
+      <ul class="row-top">
+        <% produtos.forEach(produto => { %>
+        <li class="product-top">
+            <div class="product-top-img">
+            <img src=<%=produto.image%> alt="" />
+            </div>
+          <div class="product-top-info">
+            <p><%= produto.name%></p>
+            <p><%=produto.description%></p>
+          </div>
+          <div class="price"><%=produto.price%>R$</div>
+          <form class="product-top-button" method="POST" action="/auth/lista-produtos/<%=produto.id%>/delete?_method=DELETE" >
+            <button>Excluir</button>
+          </form>
+        </li>
+        <% }) %>
+    </div>
+    </main>
+
+    <%- include('../components/footer.ejs') %>
+  </body>
+</html>
