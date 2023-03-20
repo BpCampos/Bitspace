@@ -32,7 +32,7 @@
                 Quantidade
               </p>
                 <button ><span class="material-symbols-outlined" data-button="+"> add </span></button>
-                <input data-quantity value="0" disabled></input>
+                <input data-quantity value="1" disabled></input>
                 <button ><span class="material-symbols-outlined" data-button="-"> remove </span></button>
               
               <span><%=new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(produto.price)%></span>
@@ -67,7 +67,7 @@
             <p>Valor Total</p>
             <p>R$ <%=produto.price%></p>
           </li>
-          <a href="/listagem-produtos"><button class="add-more">Escolher mais produtos</button></a>
+          <a href="/"><button class="add-more">Escolher mais produtos</button></a>
           <button class="finish">FINALIZAR</button>
         </div>
       </div>
