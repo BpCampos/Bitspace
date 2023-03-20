@@ -3,6 +3,12 @@ const { Category, Product } = require('../models')
 
 const authController = {
 
+    showProdutos: async (req, res) => {
+        const produtos = await Product.findAll()
+
+        res.render('./auth/lista-produtos', { produtos })
+    },
+
     showCadastroProduto: async (req, res) => {
         const url = req.originalUrl;
 
@@ -20,6 +26,15 @@ const authController = {
 
         return res.redirect('/auth/cadastro-produto')
     },
+
+    deleteProduto: async (req, res) => {
+
+        const { id } = req.params
+
+        await Product.destroy({ where: { id } })
+
+        return res.redirect('/listagem-produtos')
+    }
 
 }
 
