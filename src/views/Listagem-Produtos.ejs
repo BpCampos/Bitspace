@@ -43,7 +43,7 @@
       </div>
       <div class="price"><%=new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(produto.price)%></div>
       <form class="product-top-button">
-        <a href="detalhe-produto/<%=produto.id%>"><button>Comprar</button></a>
+        <a href="/detalhe-produto/<%=produto.id%>">Comprar</a>
       </form>
     </li>
     <% }) %>

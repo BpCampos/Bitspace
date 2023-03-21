@@ -37,16 +37,46 @@
             </div>
             <div class="prod-inst">
               <span>Parcelas</span>
-              <div class="instalment">R$ 1000,00(1x sem juros)</div>
-              <div class="instalment">R$ 1000,00(2x sem juros)</div>
-              <div class="instalment">R$ 1000,00(3x sem juros)</div>
-              <div class="instalment">R$ 1000,00(4x sem juros)</div>
-              <div class="instalment">R$ 1000,00(5x sem juros)</div>
-              <div class="instalment">R$ 1000,00(6x sem juros)</div>
-              <div class="instalment">R$ 1000,00(7x sem juros)</div>
-              <div class="instalment">R$ 1000,00(8x sem juros)</div>
-              <div class="instalment">R$ 1000,00(9x sem juros)</div>
-              <div class="instalment">R$ 1000,00(10x sem juros)</div>
+              <div class="instalment">
+                <%=new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'}).format(produto.price)%>(1x sem
+                juros)
+              </div>
+              <div class="instalment">
+                <%=new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'}).format(produto.price / 2)%>(2x
+                sem juros)
+              </div>
+              <div class="instalment">
+                <%=new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'}).format(produto.price / 3)%>(3x
+                sem juros)
+              </div>
+              <div class="instalment">
+                <%=new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'}).format(produto.price / 4)%>(4x
+                sem juros)
+              </div>
+              <div class="instalment">
+                <%=new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'}).format(produto.price / 5)%>(5x
+                sem juros)
+              </div>
+              <div class="instalment">
+                <%=new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'}).format(produto.price / 6)%>(6x
+                sem juros)
+              </div>
+              <div class="instalment">
+                <%=new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'}).format(produto.price / 7)%>(7x
+                sem juros)
+              </div>
+              <div class="instalment">
+                <%=new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'}).format(produto.price/ 8)%>(8x
+                sem juros)
+              </div>
+              <div class="instalment">
+                <%=new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'}).format(produto.price / 9)%>(9x
+                sem juros)
+              </div>
+              <div class="instalment">
+                <%=new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL'}).format(produto.price /
+                10)%>(10x sem juros)
+              </div>
             </div>
           </div>
         </div>

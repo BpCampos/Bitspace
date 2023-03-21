@@ -6,7 +6,9 @@ const authController = {
     showProdutos: async (req, res) => {
         const produtos = await Product.findAll()
 
-        res.render('./auth/lista-produtos', { produtos })
+        /* res.render('./auth/lista-produtos', { produtos }) */
+
+        return res.status(200).json({ data: produtos })
     },
 
     showCadastroProduto: async (req, res) => {
@@ -35,6 +37,25 @@ const authController = {
         const categorias = await Category.findAll()
 
         return res.render('./auth/alterar-produto', { categorias, produto })
+    },
+
+    alterarProduto: async (req, res) => {
+        const { id } = req.params
+
+        const { name, price, description, category } = req.body
+
+        await Product.update({
+            name,
+            price,
+            description,
+            category
+        }, {
+            where: {
+                id: id
+            }
+        })
+
+        return res.redirect('/auth/lista-produtos')
     },
 
     deleteProduto: async (req, res) => {
