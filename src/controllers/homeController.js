@@ -1,4 +1,4 @@
-const { Product } = require('../models')
+const { Product, Client } = require('../models')
 
 const homeController = {
 
@@ -46,6 +46,14 @@ const homeController = {
 
     showPaginaCadastro: (req, res) => {
         res.render('Pagina-Cadastro')
+    },
+     
+    createCadastro: async (req, res) => {
+        const { nome, sobrenome, cpf, RG, email, senha, CEP, Logradouro, numero, complemento, 
+        bairro, localidade, uf } = req.body
+
+        await Client.create({ nome, sobrenome, cpf, RG, email, senha, CEP, Logradouro, numero, complemento, 
+        bairro, localidade, uf })
     },
 
     showPaginaLogin: (req, res) => {
