@@ -6,9 +6,8 @@ const authController = {
     showProdutos: async (req, res) => {
         const produtos = await Product.findAll()
 
-        /* res.render('./auth/lista-produtos', { produtos }) */
+        res.render('./auth/lista-produtos', { produtos })
 
-        return res.status(200).json({ data: produtos })
     },
 
     showCadastroProduto: async (req, res) => {

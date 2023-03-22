@@ -9,8 +9,7 @@ router.get('/detalhe-produto/:id', homeController.showDetalheProduto)
 router.get('/finalizacao-da-compra', homeController.showFinalizacaoDaCompra)
 router.get('/listagem-produtos/:id', homeController.showListagemProduto)
 router.get('/pagina-cadastro', homeController.showPaginaCadastro)
-router.post('/auth/Pagina-Cadastro', upload.all(), homeController.LoginCadastro)
-//router.delete('/auth/Pagina-Cadastro/:id/delete', homeController.deleteLoginCadastro)
+/* router.post('/auth/Pagina-Cadastro', homeController.LoginCadastro) */
 router.get('/pagina-login', homeController.showPaginaLogin)
 router.get('/painel-do-usuario', homeController.showPainelDoUsuario)
 
