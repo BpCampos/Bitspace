@@ -28,7 +28,7 @@ function addQuantity(operacao) {
     if (operacao === "+") {
         quantity.value = Number(quantity.value) + 1;
         precoFinal = Number(quantity.value) * Number(precoBaseFinal)
-        let precoConvertido = precoFinal.toLocaleString('pt-BR', { minimumfractiondigits: 2 });
+        let precoConvertido = precoFinal.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
         precoProduto.innerText = `R$ ${precoConvertido}`
 
 
@@ -38,7 +38,7 @@ function addQuantity(operacao) {
         quantity.value = Number(quantity.value) - 1;
         let precoFinalReduzido = precoFinal - precoBaseFinal
         precoFinal = precoFinalReduzido
-        precoConvertido = precoFinal.toLocaleString('pt-BR', { minimumfractiondigits: 2 });
+        precoConvertido = precoFinal.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
         precoProduto.innerText = `R$ ${precoConvertido}`
     }
 }
