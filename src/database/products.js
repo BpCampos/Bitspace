@@ -6,8 +6,8 @@ const products = [
     image: "/image/1679067694887.jpg",
     description: "",
     category_id: 2,
-    createdAt: "2023-03-17 15:41:34",
-    updatedAt: "2023-03-17 15:41:34"
+    createdAt: (new Date()).toJSON().substring(0, 19),
+    updatedAt: (new Date()).toJSON().substring(0, 19)
   },
   {
     id: 2,
@@ -16,8 +16,8 @@ const products = [
     image: "/image/1679241225423.jpg",
     description: "",
     category_id: 2,
-    createdAt: "2023-03-19 15:53:45",
-    updatedAt: "2023-03-19 15:53:45"
+    createdAt: (new Date()).toJSON().substring(0, 19),
+    updatedAt: (new Date()).toJSON().substring(0, 19)
   },
   {
     id: 3,
@@ -26,8 +26,8 @@ const products = [
     image: "/image/1679241249071.jpg",
     description: "",
     category_id: 1,
-    createdAt: "2023-03-19 15:54:09",
-    updatedAt: "2023-03-19 15:54:09"
+    createdAt: (new Date()).toJSON().substring(0, 19),
+    updatedAt: (new Date()).toJSON().substring(0, 19)
   },
   {
     id: 4,
@@ -36,8 +36,8 @@ const products = [
     image: "/image/1679241273090.png",
     description: "",
     category_id: 4,
-    createdAt: "2023-03-19 15:54:33",
-    updatedAt: "2023-03-19 15:54:33"
+    createdAt: (new Date()).toJSON().substring(0, 19),
+    updatedAt: (new Date()).toJSON().substring(0, 19)
   },
   {
     id: 5,
@@ -46,8 +46,8 @@ const products = [
     image: "/image/1679241291970.jpg",
     description: "",
     category_id: 4,
-    createdAt: "2023-03-19 15:54:51",
-    updatedAt: "2023-03-19 15:54:51"
+    createdAt: (new Date()).toJSON().substring(0, 19),
+    updatedAt: (new Date()).toJSON().substring(0, 19)
   },
   {
     id: 6,
@@ -56,8 +56,8 @@ const products = [
     image: "/image/1679241320521.jpg",
     description: "",
     category_id: 3,
-    createdAt: "2023-03-19 15:55:20",
-    updatedAt: "2023-03-19 15:55:20"
+    createdAt: (new Date()).toJSON().substring(0, 19),
+    updatedAt: (new Date()).toJSON().substring(0, 19)
   },
   {
     id: 7,
@@ -66,8 +66,8 @@ const products = [
     image: "/image/1679241360550.jpg",
     description: "",
     category_id: 1,
-    createdAt: "2023-03-19 15:56:00",
-    updatedAt: "2023-03-19 15:56:00"
+    createdAt: (new Date()).toJSON().substring(0, 19),
+    updatedAt: (new Date()).toJSON().substring(0, 19)
   },
   {
     id: 8,
@@ -76,8 +76,8 @@ const products = [
     image: "/image/1679241388201.jpg",
     description: "",
     category_id: 3,
-    createdAt: "2023-03-19 15:56:28",
-    updatedAt: "2023-03-19 15:56:28"
+    createdAt: (new Date()).toJSON().substring(0, 19),
+    updatedAt: (new Date()).toJSON().substring(0, 19)
   },
   {
     id: 9,
@@ -86,8 +86,8 @@ const products = [
     image: "/image/1679241415158.jpg",
     description: "",
     category_id: 2,
-    createdAt: "2023-03-19 15:56:55",
-    updatedAt: "2023-03-19 15:56:55"
+    createdAt: (new Date()).toJSON().substring(0, 19),
+    updatedAt: (new Date()).toJSON().substring(0, 19)
   },
   {
     id: 10,
@@ -96,8 +96,8 @@ const products = [
     image: "/image/1679241443494.jpg",
     description: "",
     category_id: 2,
-    createdAt: "2023-03-19 15:57:23",
-    updatedAt: "2023-03-19 15:57:23"
+    createdAt: (new Date()).toJSON().substring(0, 19),
+    updatedAt: (new Date()).toJSON().substring(0, 19)
   }
 ]
 
