@@ -35,7 +35,7 @@
                 <input data-quantity value="1" disabled></input>
                 <button ><span class="material-symbols-outlined" data-button="-"> remove </span></button>
               
-              <span><%=new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(produto.price)%></span>
+              <span id="precoProduto">R$ <%=produto.price.toLocaleString('pt-BR', {minimumFractionDigits: 2})%></span>
             </section>
           </div>
           <div class="frete">
