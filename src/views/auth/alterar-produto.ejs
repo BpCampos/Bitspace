@@ -10,7 +10,7 @@
   <body>
     <%- include('../components/header.ejs') %>
     <div class="form-product">
-      <form action="/auth/cadastro-produto/<%=produto.id%>/update?_method=PUT" method="POST">
+      <form action="/auth/alterar-produto/<%=produto.id%>/update?_method=PUT" method="POST">
         <h1>Alterar produto</h1>
         <label for="name">Nome</label>
         <input value="<%=produto.name%>" name="name" type="text" required />
