@@ -38,13 +38,6 @@
               <span id="precoProduto">R$ <%=produto.price.toLocaleString('pt-BR', {minimumFractionDigits: 2})%></span>
             </section>
           </div>
-          <div class="frete">
-            <form class="cep">
-              <label for="cep-number">Digite aqui seu CEP</label>
-              <input type="text" id="cep-number" name="cep-number" />
-            </form>
-            <button>Calcular</button>
-          </div>
         </div>
         <div class="price-info">
           <li class="info">
@@ -65,7 +58,7 @@
           </li>
           <li class="info">
             <p>Valor Total</p>
-            <p>R$ <%=produto.price%></p>
+            <p id="precoFinal">R$ <%=produto.price%></p>
           </li>
           <a href="/"><button class="add-more">Escolher mais produtos</button></a>
           <button class="finish">FINALIZAR</button>

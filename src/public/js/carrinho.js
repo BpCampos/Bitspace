@@ -1,6 +1,7 @@
 const button = document.querySelectorAll('[data-button]')
 const quantity = document.querySelector('[data-quantity]')
 const precoProduto = document.querySelector('body > main > div > div.product > div.product-info > section.bottom-section > span')
+const precoFinalProduto = document.getElementById('precoFinal')
 
 console.log(precoProduto)
 
@@ -30,6 +31,7 @@ function addQuantity(operacao) {
         precoFinal = Number(quantity.value) * Number(precoBaseFinal)
         let precoConvertido = precoFinal.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
         precoProduto.innerText = `R$ ${precoConvertido}`
+        precoFinalProduto.innerText = `R$ ${precoConvertido}`
 
 
     } else if (quantity.value <= 1) {
@@ -40,6 +42,7 @@ function addQuantity(operacao) {
         precoFinal = precoFinalReduzido
         precoConvertido = precoFinal.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
         precoProduto.innerText = `R$ ${precoConvertido}`
+        precoFinalProduto.innerText = `R$ ${precoConvertido}`
     }
 }
 
