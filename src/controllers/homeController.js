@@ -47,13 +47,16 @@ const homeController = {
     showPaginaCadastro: (req, res) => {
         res.render('Pagina-Cadastro')
     },
-     
-    createCadastro: async (req, res) => {
-        const { nome, sobrenome, cpf, RG, email, senha, CEP, Logradouro, numero, complemento, 
-        bairro, localidade, uf } = req.body
 
-        await Client.create({ nome, sobrenome, cpf, RG, email, senha, CEP, Logradouro, numero, complemento, 
-        bairro, localidade, uf })
+    createCadastro: async (req, res) => {
+
+        const { name, surname, cpf, rg, email, password, cep, street, number, complemento, neighborhood, city, uf } = req.body
+
+        await Client.create({
+            name, surname, cpf, rg, email, password, cep, street, number, complemento, neighborhood, city, uf
+        })
+
+        return res.redirect('/')
     },
 
     showPaginaLogin: (req, res) => {

@@ -8,51 +8,51 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             allowNull: false
         },
-        nome: {
+        name: {
             type: DataTypes.STRING(50),
             allowNull: false
         },
-        sobrenome: {
+        surname: {
             type: DataTypes.STRING(50),
             allowNull: false
         },
-        senha: {
+        password: {
             type: DataTypes.STRING(250),
             allowNull: false
         },
         cpf: {
-            type: DataTypes.STRING(250),
+            type: DataTypes.INTEGER(50),
             allowNull: false
         },
         rg: {
-            type: DataTypes.INTEGER(14),
+            type: DataTypes.STRING(250),
             allowNull: false
         },
         email: {
             type: DataTypes.STRING(250),
             allowNull: false
         },
-        CEP: {
+        cep: {
             type: DataTypes.INTEGER(50),
             allowNull: false
         },
-        logradouro: {
-            type: DataTypes.STRING(250),
+        street: {
+            type: DataTypes.STRING(255),
             allowNull: false
         },
-        numero: {
-            type: DataTypes.INTEGER(250),
+        number: {
+            type: DataTypes.INTEGER(255),
             allowNull: false
         },
         complemento: {
             type: DataTypes.INTEGER(250),
             allowNull: false
         },
-        bairro: {
+        neighborhood: {
             type: DataTypes.INTEGER(250),
             allowNull: false
         },
-        localidade: {
+        city: {
             type: DataTypes.INTEGER(250),
             allowNull: false
         },
