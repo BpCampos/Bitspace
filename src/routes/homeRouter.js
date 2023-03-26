@@ -4,18 +4,18 @@ const homeController = require('../controllers/homeController')
 const router = express.Router();
 //Middlewares
 const loggedUserMiddleware = require('../middlewares/loggedUserMiddleware');
-
+const notLoggedUserMiddleware = require('../middlewares/notLoggedUserMiddleware');
 
 router.get('/', homeController.showHome)
 router.get('/carrinho/:id', homeController.showCarrinho)
 router.get('/detalhe-produto/:id', homeController.showDetalheProduto)
-router.get('/finalizacao-da-compra', homeController.showFinalizacaoDaCompra)
-router.get('/listagem-produtos/:id', homeController.showListagemProduto)
+router.get('/finalizacaoDaCompra', homeController.showFinalizacaoDaCompra)
+router.get('/Listagem-Produtos/:id', homeController.showListagemProduto)
 
-router.get('/pagina-cadastro', loggedUserMiddleware, homeController.showPaginaCadastro)
-router.post('/pagina-cadastro', homeController.createCadastro)
-router.get('/pagina-login', loggedUserMiddleware, homeController.showPaginaLogin)
-router.post('/pagina-login', homeController.loginProcess)
-router.get('/painel-do-usuario', homeController.showPainelDoUsuario)
+router.get('/Pagina-Cadastro', loggedUserMiddleware, homeController.showPaginaCadastro)
+router.post('/Pagina-Cadastro', homeController.createCadastro)
+router.get('/Pagina-Login', loggedUserMiddleware, homeController.showPaginaLogin)
+router.post('/Pagina-Login', homeController.loginProcess)
+router.get('/painelDoUsuario', notLoggedUserMiddleware, homeController.showPainelDoUsuario)
 
 module.exports = router
