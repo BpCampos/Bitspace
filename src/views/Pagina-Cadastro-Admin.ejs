@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/Pagina-Cadastro.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <title>Header</title>
+  </head>
+  <body>
+    <%- include('./components/header.ejs') %>
+
+    <form class="start-cadastro" action="/pagina-cadastro" method="POST">
+      <h1>Crie sua conta</h1>
+
+      <div class="input-cadastro">
+        <label for="nome">nome</label>
+        <input type="text" name="name" id="nome" placeholder="Nome" />
+      </div>
+
+      <div class="input-cadastro">
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" name="surname" id="sobrenome" placeholder="Sobrenome" />
+      </div>
+
+
+      <div class="input-cadastro">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu melhor email" />
+      </div>
+
+      <div class="input-cadastro">
+        <label for="senha">Senha</label>
+        <input type="password" name="password" id="senha" placeholder="senha" />
+      </div>
+
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <%- include('./components/footer.ejs') %>
+    <script src="js/defaults.js"></script>
+  </body>
+</html>
