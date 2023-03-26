@@ -63,15 +63,21 @@ const homeController = {
     },
 
     showPaginaLogin: (req, res) => {
+  
         return res.render('Pagina-Login');
         
     },
 
     loginProcess:(req,res) =>{
+      
         let userToLogin = User.findUserByField('email',req.body.email);
         if(userToLogin){
             if(userToLogin.password === req.body.password){
                 req.session.userLogged = userToLogin;
+                if(req.body.remember_user){
+                    res.cookie('userEmail',req.body.email,{maxAge:(1000*60)*30});
+                    //res.cookie('userSenha',req.body.password,{maxAge:(1000*60)*30});
+                }
                 return res.redirect('/painelDoUsuario');
             }
                 return res.render('Pagina-Login',{

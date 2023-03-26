@@ -5,7 +5,10 @@ const homeRouter = require('./routes/homeRouter');
 const authRouter = require('./routes/authRouter');
 const methodOverride = require('method-override');
 const session = require('express-session');
-
+const loggedUserDataMiddleware = require('../src/middlewares/loggedUserDataMiddleware');
+const cookies = require('cookie-parser');
+const notLoggedUserMiddleware = require('../src/middlewares/notLoggedUserMiddleware');
+const loggedUserMiddleware = require('../src/middlewares/loggedUserMiddleware');
 const app = express();
 const port = 4000;
 
@@ -13,8 +16,9 @@ app.use(session({
     secret:"senhamuitosecreta",
     resave: false,
     saveUninitialized:false,
-}))
-
+}));
+app.use(cookies());
+app.use(loggedUserDataMiddleware);
 
 
 //* Configurações/middlewares
