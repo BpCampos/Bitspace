@@ -71,6 +71,7 @@ const homeController = {
         let userToLogin = User.findUserByField('email',req.body.email);
         if(userToLogin){
             if(userToLogin.password === req.body.password){
+                req.session.userLogged = userToLogin;
                 return res.redirect('/painelDoUsuario');
             }
                 return res.render('Pagina-Login',{
@@ -91,7 +92,12 @@ const homeController = {
 
     showPainelDoUsuario: (req, res) => {
         res.render('painelDoUsuario')
+        userLogged:req.session.userLogged
     },
+    logout:(req,res)=>{
+        req.session.destroy();
+        return res.redirect('/');
+    }
 }
 
 module.exports = homeController;

@@ -1,12 +1,21 @@
 //* Importacações
 const express = require('express');
-const path = require('path')
-const homeRouter = require('./routes/homeRouter')
-const authRouter = require('./routes/authRouter')
-const methodOverride = require('method-override')
+const path = require('path');
+const homeRouter = require('./routes/homeRouter');
+const authRouter = require('./routes/authRouter');
+const methodOverride = require('method-override');
+const session = require('express-session');
 
 const app = express();
 const port = 4000;
+
+app.use(session({
+    secret:"senhamuitosecreta",
+    resave: false,
+    saveUninitialized:false,
+}))
+
+
 
 //* Configurações/middlewares
 app.set('view engine', 'ejs');
