@@ -1,5 +1,5 @@
 //CRUD
-
+module.exports = (sequelize, DataTypes) => {
 const {fstat} = require("fs")
 
 const fs = require('fs');
@@ -49,5 +49,5 @@ const User = {
 //console.log(User.findUserByField('name','Zeca'))
 //exemplo para criar um usuário:
 //console.log(User.create({fullName:'Mariana',email:'ma@dh.com'}))
-
-module.exports = User;
+return User;
+}

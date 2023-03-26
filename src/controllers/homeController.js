@@ -1,4 +1,6 @@
-const { Product, Client } = require('../models')
+const { Product, Client} = require('../models')
+
+const User = require('../models/User');
 
 const homeController = {
 
@@ -45,22 +47,46 @@ const homeController = {
     },
 
     showPaginaCadastro: (req, res) => {
-        res.render('Pagina-Cadastro')
+        res.render('Pagina-Cadastro');
+
     },
 
     createCadastro: async (req, res) => {
 
-        const { name, surname, cpf, rg, email, password, cep, street, number, complemento, neighborhood, city, uf } = req.body
+       const { name, surname, cpf, rg, email, password, cep, street, number, complemento, neighborhood, city, uf } = req.body;
 
         await Client.create({
             name, surname, cpf, rg, email, password, cep, street, number, complemento, neighborhood, city, uf
         })
-
-        return res.redirect('/')
+        return res.redirect('/Pagina-Login')
+        
     },
 
     showPaginaLogin: (req, res) => {
-        res.render('Pagina-Login')
+        return res.render('Pagina-Login');
+        
+    },
+
+    loginProcess:(req,res) =>{
+        let userToLogin = User.findUserByField('email',req.body.email);
+        if(userToLogin){
+            if(userToLogin.password === req.body.password){
+                return res.redirect('/painelDoUsuario');
+            }
+                return res.render('Pagina-Login',{
+                    erros:{
+                        email:{
+                            msg:'A senha está inválida'
+                        }
+                    }})
+            }
+        return res.render('Pagina-Login',{
+            erros:{
+                email:{
+                    msg:'Este email nao foi encontrado'
+                }
+            }
+        })
     },
 
     showPainelDoUsuario: (req, res) => {

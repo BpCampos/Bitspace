@@ -11,6 +11,7 @@ router.get('/listagem-produtos/:id', homeController.showListagemProduto)
 router.get('/pagina-cadastro', homeController.showPaginaCadastro)
 router.post('/pagina-cadastro', homeController.createCadastro)
 router.get('/pagina-login', homeController.showPaginaLogin)
+router.post('/pagina-login', homeController.loginProcess)
 router.get('/painel-do-usuario', homeController.showPainelDoUsuario)
 
 module.exports = router
