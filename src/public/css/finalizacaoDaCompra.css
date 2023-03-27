@@ -14,10 +14,9 @@ main {
   justify-content: center;
   text-align: center;
   font-size: 1rem;
-  padding: 200px 150px;
+  height: 100vh;
   /* background-image: linear-gradient(180deg, #1d063af8 35%, #5c0dbdd0 90%); */
   background-color: #f2f2f2;
-  height: 100%;
   width: 100%;
   color: #181818;
   gap: 5px;
@@ -26,7 +25,9 @@ main {
 .top-info img {
   width: 50px;
   height: 50px;
+  margin-bottom: 60px;
 }
+
 .image {
   display: inline-block;
   width: 15%;
@@ -34,6 +35,11 @@ main {
   text-align: center;
   margin-top: 5px;
 }
+
+.image img {
+  margin: 0;
+}
+
 .button-left {
   display: inline-block;
   flex-wrap: nowrap;

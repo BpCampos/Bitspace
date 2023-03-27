@@ -30,7 +30,7 @@ const homeController = {
     },
 
     showFinalizacaoDaCompra: (req, res) => {
-        res.render('finalizaçãoDaCompra')
+        res.render('finalizacaoDaCompra')
     },
 
     showListagemProduto: async (req, res) => {
