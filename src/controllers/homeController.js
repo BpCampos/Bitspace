@@ -63,37 +63,34 @@ const homeController = {
     },
 
     showPaginaLogin: (req, res) => {
-        return res.render('Pagina-Login');
+        return res.render('Pagina-Login', { errors: undefined });
 
     },
 
-    loginProcess: (req, res) => {
-        let userToLogin = User.findUserByField('email', req.body.email);
+    loginProcess: async (req, res) => {
+
+        const { email, password } = req.body
+
+        let userToLogin = await Client.findOne({
+            where: {
+                email: email,
+                password: password
+            }
+        });
+
         if (userToLogin) {
-            if (userToLogin.password === req.body.password) {
-                req.session.userLogged = userToLogin;
-                return res.redirect('/painelDoUsuario');
-            }
-            return res.render('Pagina-Login', {
-                erros: {
-                    email: {
-                        msg: 'A senha está inválida'
-                    }
-                }
-            })
+            delete userToLogin.password
+            req.session.userLogged = userToLogin
+            return res.render('painelDoUsuario', { userLogged: req.session.userLogged })
         }
-        return res.render('Pagina-Login', {
-            erros: {
-                email: {
-                    msg: 'Este email nao foi encontrado'
-                }
-            }
-        })
+
+        return res.render('Pagina-Login', { errors: { msg: "Email ou senha inválidos" } })
     },
 
     showPainelDoUsuario: (req, res) => {
-        res.render('painelDoUsuario')
-        userLogged: req.session.userLogged
+
+        res.render('painelDoUsuario', { userLogged: req.session.userLogged })
+
     },
     logout: (req, res) => {
         req.session.destroy();
