@@ -15,16 +15,10 @@ const port = 4000;
 app.use(session({
     secret: "senhamuitosecreta",
     resave: false,
-<<<<<<< HEAD
     saveUninitialized:false,
 }));
 app.use(cookies());
 app.use(loggedUserDataMiddleware);
-=======
-    saveUninitialized: false,
-}))
-
->>>>>>> c6558dab2933915feeb3b4a669e6f10af451c629
 
 
 //* Configurações/middlewares

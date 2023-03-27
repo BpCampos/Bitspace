@@ -5,9 +5,9 @@ const {fstat} = require("fs")
 const fs = require('fs');
 
 const User = {
-    fileName:'./src/database/users.json',
+    fileName:'./src/database/users.js',
 
-    create: function(userData) {
+/*     create: function(userData) {
         let allUsers = this.getUsers();
         let newUser = {
             id:this.generateId(),
@@ -17,9 +17,9 @@ const User = {
         allUsers.push(newUser);
         fs.writeFileSync(this.fileName,JSON.stringify(allUsers, null,' '));
         return newUser;
-    },
+    }, */
 
-    generateId: function(){
+/*     generateId: function(){
         let allUsers = this.getUsers();
         let lastUser = allUsers.pop();
 
@@ -28,7 +28,7 @@ const User = {
         }
 
         return 1;
-    },
+    }, */
 
     getUsers: function(){
         return JSON.parse(fs.readFileSync(this.fileName,'utf-8'))
