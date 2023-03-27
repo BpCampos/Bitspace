@@ -10,9 +10,9 @@ const app = express();
 const port = 4000;
 
 app.use(session({
-    secret:"senhamuitosecreta",
+    secret: "senhamuitosecreta",
     resave: false,
-    saveUninitialized:false,
+    saveUninitialized: false,
 }))
 
 

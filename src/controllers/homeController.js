@@ -1,4 +1,4 @@
-const { Product, Client} = require('../models')
+const { Product, Client } = require('../models')
 
 const User = require('../models/User');
 
@@ -53,38 +53,39 @@ const homeController = {
 
     createCadastro: async (req, res) => {
 
-       const { name, surname, cpf, rg, email, password, cep, street, number, complemento, neighborhood, city, uf } = req.body;
+        const { name, surname, cpf, rg, email, password, cep, street, number, complemento, neighborhood, city, uf } = req.body;
 
         await Client.create({
             name, surname, cpf, rg, email, password, cep, street, number, complemento, neighborhood, city, uf
         })
         return res.redirect('/Pagina-Login')
-        
+
     },
 
     showPaginaLogin: (req, res) => {
         return res.render('Pagina-Login');
-        
+
     },
 
-    loginProcess:(req,res) =>{
-        let userToLogin = User.findUserByField('email',req.body.email);
-        if(userToLogin){
-            if(userToLogin.password === req.body.password){
+    loginProcess: (req, res) => {
+        let userToLogin = User.findUserByField('email', req.body.email);
+        if (userToLogin) {
+            if (userToLogin.password === req.body.password) {
                 req.session.userLogged = userToLogin;
                 return res.redirect('/painelDoUsuario');
             }
-                return res.render('Pagina-Login',{
-                    erros:{
-                        email:{
-                            msg:'A senha está inválida'
-                        }
-                    }})
-            }
-        return res.render('Pagina-Login',{
-            erros:{
-                email:{
-                    msg:'Este email nao foi encontrado'
+            return res.render('Pagina-Login', {
+                erros: {
+                    email: {
+                        msg: 'A senha está inválida'
+                    }
+                }
+            })
+        }
+        return res.render('Pagina-Login', {
+            erros: {
+                email: {
+                    msg: 'Este email nao foi encontrado'
                 }
             }
         })
@@ -92,9 +93,9 @@ const homeController = {
 
     showPainelDoUsuario: (req, res) => {
         res.render('painelDoUsuario')
-        userLogged:req.session.userLogged
+        userLogged: req.session.userLogged
     },
-    logout:(req,res)=>{
+    logout: (req, res) => {
         req.session.destroy();
         return res.redirect('/');
     }
