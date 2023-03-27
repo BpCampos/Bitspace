@@ -1,4 +1,4 @@
-const { Product, Client} = require('../models')
+const { Product, Client } = require('../models')
 
 const User = require('../models/User');
 
@@ -30,7 +30,7 @@ const homeController = {
     },
 
     showFinalizacaoDaCompra: (req, res) => {
-        res.render('finalizaçãoDaCompra')
+        res.render('finalizacaoDaCompra')
     },
 
     showListagemProduto: async (req, res) => {
@@ -53,16 +53,17 @@ const homeController = {
 
     createCadastro: async (req, res) => {
 
-       const { name, surname, cpf, rg, email, password, cep, street, number, complemento, neighborhood, city, uf } = req.body;
+        const { name, surname, cpf, rg, email, password, cep, street, number, complemento, neighborhood, city, uf } = req.body;
 
         await Client.create({
             name, surname, cpf, rg, email, password, cep, street, number, complemento, neighborhood, city, uf
         })
         return res.redirect('/Pagina-Login')
-        
+
     },
 
     showPaginaLogin: (req, res) => {
+<<<<<<< HEAD
   
         return res.render('Pagina-Login');
         
@@ -79,28 +80,38 @@ const homeController = {
                     //res.cookie('userSenha',req.body.password,{maxAge:(1000*60)*30});
                 }
                 return res.redirect('/painelDoUsuario');
+=======
+        return res.render('Pagina-Login', { errors: undefined });
+
+    },
+
+    loginProcess: async (req, res) => {
+
+        const { email, password } = req.body
+
+        let userToLogin = await Client.findOne({
+            where: {
+                email: email,
+                password: password
+>>>>>>> c6558dab2933915feeb3b4a669e6f10af451c629
             }
-                return res.render('Pagina-Login',{
-                    erros:{
-                        email:{
-                            msg:'A senha está inválida'
-                        }
-                    }})
-            }
-        return res.render('Pagina-Login',{
-            erros:{
-                email:{
-                    msg:'Este email nao foi encontrado'
-                }
-            }
-        })
+        });
+
+        if (userToLogin) {
+            delete userToLogin.password
+            req.session.userLogged = userToLogin
+            return res.render('painelDoUsuario', { userLogged: req.session.userLogged })
+        }
+
+        return res.render('Pagina-Login', { errors: { msg: "Email ou senha inválidos" } })
     },
 
     showPainelDoUsuario: (req, res) => {
-        res.render('painelDoUsuario')
-        userLogged:req.session.userLogged
+
+        res.render('painelDoUsuario', { userLogged: req.session.userLogged })
+
     },
-    logout:(req,res)=>{
+    logout: (req, res) => {
         req.session.destroy();
         return res.redirect('/');
     }

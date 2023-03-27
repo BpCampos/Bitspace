@@ -1,110 +1,115 @@
-.main-login  {
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-    justify-content:center ;
-    display: flex;
-    align-items: center;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
+.main-login {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .left-login {
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 150px;
-    padding-bottom: 90px;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 150px;
+  padding-bottom: 90px;
 }
 
 .left-img {
-    width: 35vw;
+  width: 35vw;
 }
 
 .left-login h1 {
-    color: blueviolet;
-    font-size: 50px;
+  color: blueviolet;
+  font-size: 50px;
 }
 
 .right-login {
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 300px;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 300px;
 }
 
 .card-login {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 35px;
-    background-color: #2f2841;
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px #00000056;
+  width: 60%;
+  padding: 30px 35px;
+  background-color: #2f2841;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login ul {
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.card-login form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 .card-login > h1 {
-    font-size: 50px;
-    color: #6c63ff;
-    font-weight: 800;
-    margin: 0;
+  font-size: 50px;
+  color: #6c63ff;
+  font-weight: 800;
+  margin: 0;
+  text-align: center;
 }
 
 .textfield {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px;
 }
 
 .textfield input:focus {
-    outline: 2px solid #6c63ff;
+  outline: 2px solid #6c63ff;
 }
 
 .textfield > input {
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    background-color: #514869;
-    color: #f0ffffde;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px #00000056;
-    outline: none;
-    box-sizing: border-box;
-    
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #514869;
+  color: #f0ffffde;
+  font-size: 12pt;
+  box-shadow: 0px 10px 40px #00000056;
+  outline: none;
+  box-sizing: border-box;
 }
 
 .textfield > label {
-    color: #f0ffffde;
-    margin-bottom: 10px;
+  color: #f0ffffde;
+  margin-bottom: 10px;
 }
 
 .textfield input::placeholder {
-    color: #f0ffff94
+  color: #f0ffff94;
 }
 
 .btn-login {
-    width: 50%;
-    padding: 16px 0px;
-    margin:25px;
-    border: none;
-    border-radius: 18px;
-    background-color: #6c63ff;
-    text-transform: uppercase;
-    font-weight: 800;
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #4400ff85;
-
-}   
+  width: 50%;
+  padding: 16px 0px;
+  margin: 25px;
+  border: none;
+  border-radius: 18px;
+  background-color: #6c63ff;
+  text-transform: uppercase;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px #4400ff85;
+}
