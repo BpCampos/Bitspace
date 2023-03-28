@@ -179,3 +179,7 @@ span {
   width: 80%;
   color: white;
 }
+
+.finish:hover {
+  cursor: pointer;
+}

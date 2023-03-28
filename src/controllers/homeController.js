@@ -19,6 +19,20 @@ const homeController = {
         res.render('carrinho', { produto })
     },
 
+    createSale: async (req, res) => {
+
+        const { id } = req.params
+
+        const produto = await Product.findByPk(id)
+
+        if (produto) {
+            req.session.sale = produto
+        }
+
+        return res.render('finalizacaoDaCompra', { sale: req.session.sale, userLogged: req.session.userLogged })
+
+    },
+
     showDetalheProduto: async (req, res) => {
 
         const { id } = req.params
@@ -28,8 +42,9 @@ const homeController = {
         res.render('detalhe-produto', { produto })
     },
 
-    showFinalizacaoDaCompra: (req, res) => {
-        res.render('finalizacaoDaCompra')
+    showFinalizacaoDaCompra: async (req, res) => {
+
+        res.render('finalizacaoDaCompra', { sale: req.session.sale, userLogged: req.session.userLogged })
     },
 
     showListagemProduto: async (req, res) => {
@@ -62,6 +77,7 @@ const homeController = {
     },
 
     showPaginaLogin: (req, res) => {
+
         return res.render('Pagina-Login', { errors: undefined });
 
     },
@@ -74,7 +90,6 @@ const homeController = {
             where: {
                 email: email,
                 password: password
-
             }
         });
 
@@ -89,11 +104,13 @@ const homeController = {
             return res.render('painelDoUsuario', { userLogged: req.session.userLogged })
         }
 
+        console.log(req.session.userLogged)
+
         return res.render('Pagina-Login', { errors: { msg: "Email ou senha inválidos" } })
     },
 
     showPainelDoUsuario: (req, res) => {
-        console.log(req.cookies.userEmail)
+
         res.render('painelDoUsuario', { userLogged: req.session.userLogged })
 
     },

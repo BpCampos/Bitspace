@@ -5,14 +5,15 @@ const router = express.Router();
 //Middlewares
 const loggedUserMiddleware = require('../middlewares/loggedUserMiddleware');
 const notLoggedUserMiddleware = require('../middlewares/notLoggedUserMiddleware');
+const noProductSelected = require('../middlewares/noProductSelected')
 
 
 router.get('/', homeController.showHome)
 router.get('/carrinho/:id', homeController.showCarrinho)
+router.post('/carrinho/:id', notLoggedUserMiddleware, homeController.createSale)
 router.get('/detalhe-produto/:id', homeController.showDetalheProduto)
-router.get('/finalizacaoDaCompra', homeController.showFinalizacaoDaCompra)
+router.get('/finalizacaoDaCompra', noProductSelected, homeController.showFinalizacaoDaCompra)
 router.get('/Listagem-Produtos/:id', homeController.showListagemProduto)
-
 router.get('/Pagina-Cadastro', loggedUserMiddleware, homeController.showPaginaCadastro)
 router.post('/Pagina-Cadastro', homeController.createCadastro)
 router.get('/Pagina-Login', loggedUserMiddleware, homeController.showPaginaLogin)

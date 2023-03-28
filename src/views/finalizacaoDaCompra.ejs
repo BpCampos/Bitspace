@@ -4,48 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/finalizacaoDaCompra.css" />
-    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/finalizacaoDaCompra.css" />
+    <link rel="stylesheet" href="../css/global.css" />
     <title>Finalização da compra</title>
   </head>
   <body>
     <%- include('./components/header.ejs') %>
     <main>
-      <div class="top-info">
-        <div class="image">
-          <img src="./image/carrinho-de-compras.png" />
-          <p>Carrinho</p>
+      <div class="details">
+        <div class="product">
+          <img src="<%=sale.image%>" alt="teste" />
+          <p><%=sale.name%></p>
         </div>
-        <img class="arrow-icon" src="./image/right-arrow.png" alt="" />
-        <div class="image">
-          <img src="./image/do-utilizador.png" />
-          <p>Identificação</p>
+        <img class="arrow-left" src="../image/right-arrow.png" alt="" />
+        <div class="address">
+          <h1>Endereço</h1>
+          <p><%=userLogged.city%></p>
+          <p><%=userLogged.street%> - <%=userLogged.number%></p>
         </div>
-        <img class="arrow-icon" src="./image/right-arrow.png" alt="" />
-        <div class="image">
-          <img src="./image/cartao-de-credito (1).png" />
-          <p>Pagamento</p>
-        </div>
-        <img class="arrow-icon" src="./image/right-arrow.png" alt="" />
-        <div class="image">
-          <img src="./image/olho (1).png" />
-          <p>Confirmação</p>
-        </div>
-        <img class="arrow-icon" src="./image/right-arrow.png" alt="" />
-        <div class="image">
-          <img src="./image/caixa-de-selecao.png" />
-          <p>Concluir</p>
-        </div>
+        <img class="arrow-right" src="../image/right-arrow.png" alt="" />
+        <form class="payment" action="">
+          <p>R$ <%=sale.price.toLocaleString('pt-BR', {minimumFractionDigits: 2})%></p>
+          <div>
+            <label for="installment">Parcelas</label>
+            <select name="installment" id="">
+              <option value="">1x</option>
+              <option value="">2x</option>
+              <option value="">3x</option>
+              <option value="">4x</option>
+              <option value="">5x</option>
+              <option value="">6x</option>
+              <option value="">7x</option>
+              <option value="">8x</option>
+              <option value="">9x</option>
+              <option value="">10x</option>
+            </select>
+          </div>
+          <button>Comprar</button>
+        </form>
       </div>
-      <!-- <div class="button-bottom"> -->
-      <div class="button-left">
-        <a href=""><button>VER MEUS PEDIDOS</button></a>
-      </div>
-      <div class="button-right">
-        <a href=""><button>CONTINUAR COMPRANDO</button></a>
-      </div>
-      <!-- </div> -->
     </main>
     <%- include('./components/footer.ejs') %>
   </body>

@@ -41,8 +41,8 @@
         </div>
         <div class="price-info">
           <li class="info">
-            <p>Subtotal (1 item )</p>
-            <p>R$ <%=produto.price%></p>
+            <p>Subtotal</p>
+            <p id="subtotal">R$ <%=produto.price%></p>
           </li>
           <li class="info">
             <p>Frete DigitalHouse</p>
@@ -61,7 +61,9 @@
             <p id="precoFinal">R$ <%=produto.price%></p>
           </li>
           <a href="/"><button class="add-more">Escolher mais produtos</button></a>
-          <button class="finish">FINALIZAR</button>
+          <form action="/carrinho/<%=produto.id%>" method="POST">
+            <button class="finish" type="submit">FINALIZAR</button>
+          </form>
         </div>
       </div>
       <%- include('./components/footer.ejs') %>
