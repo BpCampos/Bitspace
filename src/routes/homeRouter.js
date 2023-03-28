@@ -6,6 +6,7 @@ const router = express.Router();
 const loggedUserMiddleware = require('../middlewares/loggedUserMiddleware');
 const notLoggedUserMiddleware = require('../middlewares/notLoggedUserMiddleware');
 
+
 router.get('/', homeController.showHome)
 router.get('/carrinho/:id', homeController.showCarrinho)
 router.get('/detalhe-produto/:id', homeController.showDetalheProduto)
