@@ -19,15 +19,20 @@
       </div>
       <form class="middle-section">
         <input type="search" placeholder="Pesquisar" id="search" />
-        <button type="submit">
+          <button type="submit">
           <img src="../../image/search.png" alt="search icon" />
-        </button>
+          </button>
       </form>
       <div class="right-section">
         <div class="right-section-text">
-          <a href="/painelDoUsuario"><p class="conta">Minha conta</p></a>
-          <div class="loginArea"><a href="/pagina-login"><p class="login">Login</a></p> <p>-</p> <a href="./Pagina-Cadastro"><p class="signIn">Cadastro</p></a>
-          </div>
+          <% if(!locals.isLogged){ %>
+            <div class="loginArea"><a href="/pagina-login"><p class="login">Login</a></p> <p>-</p> <a href="./Pagina-Cadastro"><p class="signIn">Cadastro</p></a>
+            </div> 
+          <% } else{ %> 
+
+                <a href="/painelDoUsuario"><p class="conta">Minha conta</p></a>
+              
+          <% } %>
         </div>
         <img src="../../image/shopping-cart.png" alt="shopping cart icon" />
       </div>

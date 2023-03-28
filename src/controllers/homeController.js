@@ -98,7 +98,7 @@ const homeController = {
             req.session.userLogged = userToLogin
 
             if (req.body.remember_user) {
-                res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 30 });
+                res.cookie('userEmail', req.body.email, { maxAge: (1000)*60*30});
             }
 
             return res.render('painelDoUsuario', { userLogged: req.session.userLogged })
