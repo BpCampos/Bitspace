@@ -1,4 +1,4 @@
-const { Product, Client } = require('../models')
+const { Product, Client, Sale } = require('../models')
 
 
 const homeController = {
@@ -19,7 +19,7 @@ const homeController = {
         res.render('carrinho', { produto })
     },
 
-    createSale: async (req, res) => {
+    saleInfo: async (req, res) => {
 
         const { id } = req.params
 
@@ -44,7 +44,15 @@ const homeController = {
 
     showFinalizacaoDaCompra: async (req, res) => {
 
-        res.render('finalizacaoDaCompra', { sale: req.session.sale, userLogged: req.session.userLogged })
+        res.render('finalizacaoDaCompra', { sale: req.session.sale, userlogged: req.session.userLogged })
+    },
+
+    createSale: async (req, res) => {
+
+        await Sale.create({ total: req.session.sale.price, clients_id: req.session.userLogged.id })
+
+        return res.redirect('/')
+
     },
 
     showListagemProduto: async (req, res) => {
@@ -98,7 +106,7 @@ const homeController = {
             req.session.userLogged = userToLogin
 
             if (req.body.remember_user) {
-                res.cookie('userEmail', req.body.email, { maxAge: (1000)*60*30});
+                res.cookie('userEmail', req.body.email, { maxAge: (1000) * 60 * 30 });
             }
 
             return res.render('painelDoUsuario', { userLogged: req.session.userLogged })

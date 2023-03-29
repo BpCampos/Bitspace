@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DOUBLE,
             allowNull: false
         },
-        client_id: {
+        clients_id: {
             type: DataTypes.INTEGER,
             allowNull: false
         }

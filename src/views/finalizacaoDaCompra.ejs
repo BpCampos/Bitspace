@@ -24,7 +24,7 @@
           <p><%=userLogged.street%> - <%=userLogged.number%></p>
         </div>
         <img class="arrow-right" src="../image/right-arrow.png" alt="" />
-        <form class="payment" action="">
+        <form class="payment" action="/finalizacaoDaCompra/create" method="POST">
           <p>R$ <%=sale.price.toLocaleString('pt-BR', {minimumFractionDigits: 2})%></p>
           <div>
             <label for="installment">Parcelas</label>
@@ -41,7 +41,7 @@
               <option value="">10x</option>
             </select>
           </div>
-          <button>Comprar</button>
+          <button type="submit">Comprar</button>
         </form>
       </div>
     </main>
