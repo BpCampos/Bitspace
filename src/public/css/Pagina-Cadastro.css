@@ -2,6 +2,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  height: 6.2vh;
+}
+
 .start-cadastro {
   margin: 150px auto;
   width: 50%;

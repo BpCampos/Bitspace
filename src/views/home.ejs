@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/glide.core.css" />
-    <link rel="stylesheet" href="css/glide.theme.css" />
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/global.css" />
+    
     <script src="/js/home.js" defer></script>
     <title>Home</title>
   </head>
@@ -24,6 +24,16 @@
           </button>
       </form>
       <div class="right-section">
+        <ul class="hamburguer-nav">
+          <li class="nav-item"><a href="#">Carrinho</a></li>
+          <li class="nav-item"><a href="#">Minha conta</a></li>
+          <li class="nav-item"><a href="#">Login/Cadastro</a></li>
+        </ul>
+        <div class="hamburguer">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
         <div class="right-section-text">
           <% if(!locals.isLogged){ %>
             <div class="loginArea"><a href="/pagina-login"><p class="login">Login</a></p> <p>-</p> <a href="./Pagina-Cadastro"><p class="signIn">Cadastro</p></a>
@@ -44,22 +54,32 @@
         <a href="/listagem-produtos/3"><div>Cadeiras</div></a>
         <a href="/listagem-produtos/4"><div>Componentes</div></a>
       </nav>
-      <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide">
-              <img
-                src="./image/processador-intel-core-i3-10100f-cache-6mb-4-30-ghz-lga-1200-i3-10100f_1603394030_g.jpg"
-                alt="" />
-            </li>
-            <li class="glide__slide"><img src="./image/cadeira-tgt-rgb.jpg" alt="" /></li>
-            <li class="glide__slide"><img src="./image/monitor-gamer-msi-optics.jpg" alt="" /></li>
-          </ul>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active text-center">
+            <img class="w-25 p-3"   src="image/1679241360550.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item text-center">
+            <img class="w-25 p-3"  src="image/1679241388201.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item text-center">
+            <img class="w-25 p-3"  src="image/1679241291970.jpg" alt="Third slide">
+          </div>
+          <div class="carousel-item text-center">
+            <img class="w-25 p-3"  src="image/1679241225423.jpg" alt="Third slide">
+          </div>
+          <div class="carousel-item text-center">
+            <img class="w-25 p-3"  src="image/1679241443494.jpg" alt="Third slide">
+          </div>
         </div>
-        <div class="glide__arrows" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
       <div class="grid">
         <% produtos.slice(0,8).forEach(produto => { %>
@@ -73,11 +93,9 @@
         </div>
         <% }) %>
       </div>
-      <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-
-      <script>
-        new Glide(".glide").mount();
-      </script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </main>
     <%- include('./components/footer.ejs') %>
   </body>

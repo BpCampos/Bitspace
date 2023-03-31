@@ -1,4 +1,4 @@
-const { Product, Client, Sale } = require('../models')
+const { Product, Client, Sale, Admin } = require('../models')
 
 
 const homeController = {
@@ -80,6 +80,21 @@ const homeController = {
         await Client.create({
             name, surname, cpf, rg, email, password, cep, street, number, complemento, neighborhood, city, uf
         })
+        return res.redirect('/Pagina-Login')
+
+    },
+
+    showPaginaCadastroAdmin: async (req, res) => {
+
+        return res.render('Pagina-Cadastro-Admin')
+    },
+
+    createAdmin: async (req, res) => {
+
+        const { name, email, password } = req.body
+
+        await Admin.create({ name, email, password, isAdmin: true })
+
         return res.redirect('/Pagina-Login')
 
     },
