@@ -27,10 +27,14 @@ main {
   text-align: center;
   flex: 1;
   border: 1px solid #000;
+  text-decoration: none;
 }
-.navigation div:hover {
+
+.navigation a:hover {
   cursor: pointer;
+  color: white;
 }
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

@@ -111,6 +111,11 @@ header {
   margin-right: 5px;
 }
 
+.loginArea a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .conta,
 .login,
 .signIn {

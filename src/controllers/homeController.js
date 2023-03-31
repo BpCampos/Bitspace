@@ -109,12 +109,26 @@ const homeController = {
 
         const { email, password } = req.body
 
+        let userAdmin = await Admin.findOne({
+            where: {
+                email: email,
+                password: password
+            }
+        })
+
         let userToLogin = await Client.findOne({
             where: {
                 email: email,
                 password: password
             }
         });
+
+        if (userAdmin) {
+            delete userAdmin.password
+            req.session.adminLogged = userAdmin
+
+            return res.render('painelDoUsuario', { adminLogged: req.session.adminLogged })
+        }
 
         if (userToLogin) {
             delete userToLogin.password
@@ -126,8 +140,6 @@ const homeController = {
 
             return res.render('painelDoUsuario', { userLogged: req.session.userLogged })
         }
-
-        console.log(req.session.userLogged)
 
         return res.render('Pagina-Login', { errors: { msg: "Email ou senha inválidos" } })
     },
