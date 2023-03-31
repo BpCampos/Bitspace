@@ -21,7 +21,6 @@ async function loggedUserDataMiddleware(req, res, next) {
 
     }
 
-
     next()
 }
 module.exports = loggedUserDataMiddleware;

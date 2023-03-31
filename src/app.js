@@ -6,6 +6,7 @@ const authRouter = require('./routes/authRouter');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const loggedUserDataMiddleware = require('../src/middlewares/loggedUserDataMiddleware');
+const loggedAdminDataMiddleware = require('../src/middlewares/loggedAdminDataMiddleware')
 const cookies = require('cookie-parser');
 
 const app = express();
@@ -18,6 +19,7 @@ app.use(session({
 }));
 app.use(cookies());
 app.use(loggedUserDataMiddleware);
+app.use(loggedAdminDataMiddleware)
 
 
 //* Configurações/middlewares

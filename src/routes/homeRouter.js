@@ -6,6 +6,7 @@ const router = express.Router();
 const loggedUserMiddleware = require('../middlewares/loggedUserMiddleware');
 const notLoggedUserMiddleware = require('../middlewares/notLoggedUserMiddleware');
 const noProductSelected = require('../middlewares/noProductSelected')
+const isAdmin = require('../middlewares/isAdmin')
 
 
 router.get('/', homeController.showHome)
@@ -17,7 +18,7 @@ router.post('/finalizacaoDaCompra/create', homeController.createSale)
 router.get('/Listagem-Produtos/:id', homeController.showListagemProduto)
 router.get('/Pagina-Cadastro', loggedUserMiddleware, homeController.showPaginaCadastro)
 router.post('/Pagina-Cadastro', homeController.createCadastro)
-router.get('/pagina-cadastro-admin', homeController.showPaginaCadastroAdmin)
+router.get('/pagina-cadastro-admin', isAdmin, homeController.showPaginaCadastroAdmin)
 router.post('/pagina-cadastro-admin', homeController.createAdmin)
 router.get('/Pagina-Login', loggedUserMiddleware, homeController.showPaginaLogin)
 router.post('/Pagina-Login', homeController.loginProcess)

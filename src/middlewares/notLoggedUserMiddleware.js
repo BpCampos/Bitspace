@@ -1,7 +1,8 @@
 function notLoggedUserMiddleware(req, res, next) {
     if (!req.session.userLogged) {
-        return res.redirect('/Pagina-Login');
+        return res.redirect('/Pagina-login')
     }
-    next()
+
+    return next()
 }
 module.exports = notLoggedUserMiddleware;

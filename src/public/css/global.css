@@ -103,6 +103,11 @@ header {
   font-weight: 500;
 }
 
+.right-section-text a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .loginArea {
   display: flex;
 }

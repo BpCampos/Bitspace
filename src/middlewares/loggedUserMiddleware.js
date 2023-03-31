@@ -2,6 +2,7 @@ function loggedUserMiddleware(req, res, next) {
     if (req.session.userLogged) {
         return res.redirect('/painelDoUsuario')
     }
-    next()
+
+    return next()
 }
 module.exports = loggedUserMiddleware;

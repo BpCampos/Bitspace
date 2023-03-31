@@ -127,7 +127,13 @@ const homeController = {
             delete userAdmin.password
             req.session.adminLogged = userAdmin
 
+
+            if (req.body.remember_user) {
+                res.cookie('userEmail', req.body.email, { maxAge: (1000) * 60 * 30 });
+            }
+
             return res.render('painelDoUsuario', { adminLogged: req.session.adminLogged })
+
         }
 
         if (userToLogin) {
@@ -146,7 +152,7 @@ const homeController = {
 
     showPainelDoUsuario: (req, res) => {
 
-        res.render('painelDoUsuario', { userLogged: req.session.userLogged })
+        res.render('painelDoUsuario', { userLogged: req.session.userLogged, adminLogged: req.session.adminLogged })
 
     },
     logout: (req, res) => {
