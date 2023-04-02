@@ -63,7 +63,7 @@ const authController = {
 
         await Product.destroy({ where: { id } })
 
-        return res.redirect('/lista-produtos')
+        return res.redirect('/auth/lista-produtos')
     }
 
 }
