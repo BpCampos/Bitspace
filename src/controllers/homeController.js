@@ -144,7 +144,7 @@ const homeController = {
                 res.cookie('userEmail', req.body.email, { maxAge: (1000) * 60 * 30 });
             }
 
-            return res.render('painelDoUsuario', { userLogged: req.session.userLogged })
+            return res.render('painelDoUsuario', { userLogged: req.session.userLogged, adminLogged:false })
         }
 
         return res.render('Pagina-Login', { errors: { msg: "Email ou senha inválidos" } })
