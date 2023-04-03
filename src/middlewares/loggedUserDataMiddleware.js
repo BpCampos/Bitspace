@@ -21,7 +21,6 @@ async function loggedUserDataMiddleware(req, res, next) {
 
         }
 
-        console.log(res.locals.isLogged)
 
     }
 

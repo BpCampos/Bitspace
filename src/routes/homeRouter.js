@@ -7,13 +7,14 @@ const loggedUserMiddleware = require('../middlewares/loggedUserMiddleware');
 const notLoggedUserMiddleware = require('../middlewares/notLoggedUserMiddleware');
 const noProductSelected = require('../middlewares/noProductSelected')
 const isAdmin = require('../middlewares/isAdmin')
+const notUserMiddleware = require('../middlewares/notUserMiddleware')
 
 
 router.get('/', homeController.showHome)
 router.get('/carrinho/:id', homeController.showCarrinho)
-router.post('/carrinho/:id', notLoggedUserMiddleware, homeController.saleInfo)
+router.post('/carrinho/:id', notLoggedUserMiddleware, notUserMiddleware, homeController.saleInfo)
 router.get('/detalhe-produto/:id', homeController.showDetalheProduto)
-router.get('/finalizacaoDaCompra', noProductSelected, homeController.showFinalizacaoDaCompra)
+router.get('/finalizacaoDaCompra', noProductSelected, notUserMiddleware, homeController.showFinalizacaoDaCompra)
 router.post('/finalizacaoDaCompra/create', homeController.createSale)
 router.get('/Listagem-Produtos/:id', homeController.showListagemProduto)
 router.get('/Pagina-Cadastro', loggedUserMiddleware, homeController.showPaginaCadastro)
