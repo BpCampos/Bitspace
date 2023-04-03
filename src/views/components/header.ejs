@@ -21,16 +21,18 @@
       </form>
       <div class="right-section">
         <div class="right-section-text">
-          <% if(!locals.isLogged){ %>
+          <% if(!locals.isLogged ){ %>
           <div class="loginArea">
             <a href="/pagina-login"><p class="login">Login</p></a>
             <p>-</p>
             <a href="./Pagina-Cadastro"><p class="signIn">Cadastro</p></a>
           </div>
-          <% } else{ %>
-
-          <a href="/painelDoUsuario"><p class="conta">Minha conta</p></a>
-
+          <% } else { %>
+          <div class="userArea">
+            <a href="/painelDoUsuario"><p class="conta">Minha conta</p></a>
+            <p>-</p>
+            <a href="/logout"><p class="logout">Sair</p></a>
+          </div>
           <% } %>
         </div>
         <img src="../../image/shopping-cart.png" alt="shopping cart icon" />

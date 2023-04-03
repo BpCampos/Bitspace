@@ -1,4 +1,4 @@
-const { Client } = require('../models');
+const { Client, Admin } = require('../models');
 
 async function loggedUserDataMiddleware(req, res, next) {
 
@@ -9,15 +9,19 @@ async function loggedUserDataMiddleware(req, res, next) {
     if (emailInCookie) {
         let userFromCookie = await Client.findOne({ where: { email: emailInCookie } });
 
+        let userFromCookieAdmin = await Admin.findOne({ where: { email: emailInCookie } })
 
-        if (userFromCookie) {
-            req.session.userLogged = userFromCookie;
+        if (userFromCookie || userFromCookieAdmin) {
+            req.session.userLogged = userFromCookie || userFromCookieAdmin;
         }
 
 
         if (req.session.userLogged) {
             res.locals.isLogged = true;
+
         }
+
+        console.log(res.locals.isLogged)
 
     }
 

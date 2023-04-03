@@ -121,16 +121,27 @@ header {
   text-decoration: none;
 }
 
+.userArea {
+  display: flex;
+}
+
+.userArea a,
+p {
+  margin-right: 10px;
+}
+
 .conta,
 .login,
-.signIn {
+.signIn,
+.logout {
   transition: 100ms;
   margin: 0;
 }
 
 .conta:hover,
 .login:hover,
-.signIn:hover {
+.signIn:hover,
+.logout:hover {
   transform: scale(1.05);
   cursor: pointer;
 }

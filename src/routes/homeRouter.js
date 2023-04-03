@@ -23,5 +23,6 @@ router.post('/pagina-cadastro-admin', homeController.createAdmin)
 router.get('/Pagina-Login', loggedUserMiddleware, homeController.showPaginaLogin)
 router.post('/Pagina-Login', homeController.loginProcess)
 router.get('/painelDoUsuario', notLoggedUserMiddleware, homeController.showPainelDoUsuario)
+router.get('/logout', homeController.logout)
 
 module.exports = router
