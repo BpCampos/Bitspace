@@ -25,7 +25,7 @@ const authController = {
 
         await Product.create({ name, price, image, description, category_id: category })
 
-        return res.redirect('/auth/cadastro-produto')
+        return res.redirect('/auth/lista-produtos')
     },
 
     showAlterarProduto: async (req, res) => {

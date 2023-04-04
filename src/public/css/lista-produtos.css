@@ -163,7 +163,7 @@ main {
   color: white;
 }
 
-.navigation div {
+.navigation a {
   padding: 20px 0;
   text-align: center;
   flex: 1;
@@ -252,7 +252,7 @@ main {
 
 .product-bottom-img img,
 .product-top-img img {
-  width: 50%;
+  width: 40%;
   height: 100%;
 }
 
@@ -293,6 +293,7 @@ main {
   width: 100%;
   padding: 10px 0;
   transition: 300ms;
+  border-radius: 7px;
 }
 
 .product-bottom-button button:hover,

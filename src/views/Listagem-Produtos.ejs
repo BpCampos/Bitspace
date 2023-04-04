@@ -38,8 +38,7 @@
         <img src=<%=produto.image%> alt="" />
         </div>
       <div class="product-top-info">
-        <p><%= produto.name%></p>
-        <p><%=produto.description%></p>
+        <h2><%=produto.name%></h2>
       </div>
       <div class="price"><%=new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(produto.price)%></div>
       <form class="product-top-button">
