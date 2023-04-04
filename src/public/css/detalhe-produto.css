@@ -114,6 +114,15 @@ main {
   padding: 5px;
 }
 
+.second-section span {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+.second-section p {
+  margin-top: 15px;
+}
+
 .third-section {
   height: 300px;
   border: 1px solid black;
