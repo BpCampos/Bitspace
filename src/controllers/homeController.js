@@ -1,4 +1,5 @@
 const { Product, Client, Sale, Admin } = require('../models')
+const bcrypt = require('bcrypt');
 
 
 const homeController = {
@@ -69,18 +70,27 @@ const homeController = {
     },
 
     showPaginaCadastro: (req, res) => {
-        res.render('Pagina-Cadastro');
+        res.render('Pagina-Cadastro', { errors: false });
 
     },
 
     createCadastro: async (req, res) => {
 
-        const { name, surname, cpf, rg, email, password, cep, street, number, complemento, neighborhood, city, uf } = req.body;
+        const hashedPassword = bcrypt.hashSync(req.body.password, 12);
 
-        await Client.create({
-            name, surname, cpf, rg, email, password, cep, street, number, complemento, neighborhood, city, uf
-        })
-        return res.redirect('/Pagina-Login')
+        if (await Client.findOne({ where: { email: req.body.email, password: bcrypt.compareSync(req.body.password, hashedPassword) } })) {
+
+            const { name, surname, cpf, rg, email, cep, street, number, complemento, neighborhood, city, uf } = req.body;
+
+            await Client.create({
+                name, surname, cpf, rg, email, password: hashedPassword, cep, street, number, complemento, neighborhood, city, uf
+            })
+            return res.redirect('/Pagina-Login')
+
+        }
+
+        res.render('/Pagina-Cadastro', { errors: { msg: "Email ou senha já cadastrados" } })
+
 
     },
 
@@ -111,19 +121,17 @@ const homeController = {
 
         let userAdmin = await Admin.findOne({
             where: {
-                email: email,
-                password: password
+                email: email
             }
         })
 
         let userToLogin = await Client.findOne({
             where: {
-                email: email,
-                password: password
+                email: email
             }
         });
 
-        if (userAdmin) {
+        if (userAdmin && bcrypt.compareSync(password, userAdmin.password)) {
             delete userAdmin.password
             req.session.adminLogged = userAdmin
 
@@ -136,7 +144,7 @@ const homeController = {
 
         }
 
-        if (userToLogin) {
+        if (userToLogin && bcrypt.compareSync(password, userToLogin.password)) {
             delete userToLogin.password
             req.session.userLogged = userToLogin
 

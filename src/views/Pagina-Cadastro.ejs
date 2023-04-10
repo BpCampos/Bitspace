@@ -19,6 +19,12 @@
     <form class="start-cadastro" action="/pagina-cadastro" method="POST">
       <h1>Crie sua conta</h1>
 
+      <% if(errors !== undefined) {%>
+      <ul>
+        <li style="color: red"><%=errors.msg%></li>
+      </ul>
+      <% } %>
+
       <div class="input-cadastro">
         <label for="nome">nome</label>
         <input type="text" name="name" id="nome" placeholder="Nome" />

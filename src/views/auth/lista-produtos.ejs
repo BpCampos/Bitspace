@@ -18,19 +18,11 @@
         <a href="/listagem-produtos/4"><div>Componentes</div></a>
       </nav>
 
-
-<!-- <ul class="Barra-lateral">
-    <p><h1>Computadores</h1></p>
-<li>
-    <div>Notebooks</div>
-    <div>Desktop</div>
-    <div>Monitor</div>
-    <div>Mouse</div>
-    <div>Gamepad</div>
-    <div>Speakers</div>
-</li>
-</ul> -->
-<div class="listagem-produtos">
+<div class="produtos">
+  <div class="side-bar">
+    <a href="/auth/cadastro-produto"><p>Criar produto</p></a>
+  </div>
+  <div class="listagem-produtos">
       <ul class="row-top">
         <% produtos.forEach(produto => { %>
         <li class="product-top">
@@ -50,7 +42,9 @@
           </div>  
         </li>
         <% }) %>
-    </div>
+  </div>
+
+</div>
     </main>
 
     <%- include('../components/footer.ejs') %>

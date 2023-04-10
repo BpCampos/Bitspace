@@ -202,6 +202,20 @@ main {
   background-color: rgba(112, 112, 112, 0.493);
 }
 
+.produtos {
+  display: flex;
+}
+
+.side-bar {
+  background-image: linear-gradient(180deg, #1d063af8 35%, #5c0dbdd0 90%);
+  color: white;
+  font-weight: bold;
+  width: 30%;
+  padding: 10px;
+  height: fit-content;
+  text-align: center;
+}
+
 .row-top,
 .row-bottom {
   margin-top: 20px;
