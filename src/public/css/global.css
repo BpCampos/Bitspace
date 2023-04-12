@@ -160,41 +160,46 @@ p {
 
 /* Footer */
 footer {
-  margin-top: 30px;
-  max-width: 1920px;
-  width: 100%;
+  font-family: "Roboto", sans-serif;
+  display: flex;
   background-image: linear-gradient(180deg, #1d063af8 35%, #5c0dbdd0 90%);
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-}
-
-footer .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  color: white;
-  padding-bottom: 3px;
-}
-
-.container h1 {
-  font-size: 2rem;
-}
-
-.navigation-footer {
-  display: flex;
-  font-size: 2rem;
   justify-content: space-around;
-  height: 100%;
-  color: white;
-  margin-bottom: 30px;
+  align-items: center;
+  padding: 40px 0;
 }
 
-.navigation-footer div {
-  padding: 20px 0;
-  text-align: center;
-  flex: 1;
+.about-us {
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+.about-us li {
+  transition: 300ms;
+}
+
+.about-us li:hover {
+  cursor: pointer;
+  color: #37cfff;
+}
+
+.social {
+  display: flex;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social img {
+  width: 40px;
+  transition: 300ms;
+}
+
+.social img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .navigation-footer div:hover {

@@ -1,5 +1,6 @@
 const { Product, Client, Sale, Admin } = require('../models')
 const bcrypt = require('bcrypt');
+const { Op } = require('sequelize');
 
 
 const homeController = {
@@ -9,6 +10,23 @@ const homeController = {
         const produtos = await Product.findAll()
 
         res.render('home', { produtos })
+    },
+
+    searchProduct: async (req, res) => {
+
+        const { search } = req.query
+
+        console.log(search)
+
+        const produtos = await Product.findAll({
+            where: {
+                name: {
+                    [Op.like]: `%${search}%`
+                }
+            }
+        })
+
+        res.render('Listagem-Produtos', { produtos })
     },
 
     showCarrinho: async (req, res) => {

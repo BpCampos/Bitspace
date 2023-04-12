@@ -11,6 +11,7 @@ const notUserMiddleware = require('../middlewares/notUserMiddleware')
 
 
 router.get('/', homeController.showHome)
+router.get('/Listagem-Produtos', homeController.searchProduct)
 router.get('/carrinho/:id', homeController.showCarrinho)
 router.post('/carrinho/:id', notLoggedUserMiddleware, notUserMiddleware, homeController.saleInfo)
 router.get('/detalhe-produto/:id', homeController.showDetalheProduto)

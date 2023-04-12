@@ -35,4 +35,4 @@ app.use(homeRouter);
 app.use(authRouter);
 
 
-app.listen(port, () => console.log(`O servidor está rodando na porta ${port}`));
+app.listen(port, () => console.log(`O servidor está rodando na porta http://localhost:${port}/`));
