@@ -38,19 +38,15 @@ Create a .env file in the root of the project and add the following variables:
 - DB_DIALECT=mysql
 - DB_PORT=3306
 
-Replace <strong>your_mysql_username</strong> and <strong>your_mysql_password</strong> with your MySQL username and password, respectively.
+<p>Replace <strong style="font-size:15px;">your_mysql_username</strong> and <strong style="font-size:15px;">your_mysql_password</strong> with your MySQL username and password, respectively.</p>
 
-Run the following command in the project directory to migrate the database:
+Run the following command in the project directory to migrate the database and create all the tables:
 
 - npx sequelize db:migrate
-
-This will create the necessary tables in the ecommerce_replica database.
 
 Run the following command in the project directory to seed the database with sample data:
 
 - npx sequelize db:seed:al
-
-This will populate the tables with sample data.
 
 # Usage
 
