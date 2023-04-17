@@ -52,6 +52,6 @@ Run the following command in the project directory to seed the database with sam
 
 To start the server, run the following command in the project directory:
 
-- npm run dev
+- npm start
 
 This will start the server on http://localhost:4000. You can access the website by opening this URL in your web browser.
