@@ -41,15 +41,15 @@ const homeController = {
     carrinhoInfo: async (req, res) => {
         const { id } = req.params
 
-        const produtoInfo = await Product.findByPk(id)
+        const produto = await Product.findByPk(id)
 
-        if (produtoInfo) {
-            req.session.produto = [produtoInfo]
+        if (produto) {
+            req.session.produto = [produto]
         }
 
         let produtos = [...req.session.produto]
 
-        res.render('carrinho', { produtos, produtoInfo })
+        res.render('carrinho', { produtos, produto })
     },
 
     saleInfo: async (req, res) => {
