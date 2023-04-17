@@ -55,7 +55,3 @@ To start the server, run the following command in the project directory:
 - npm run dev
 
 This will start the server on http://localhost:4000. You can access the website by opening this URL in your web browser.
-
-# Contributing
-
-If you find any issues or have any suggestions for improvements, feel free to open an issue or submit a pull request.
