@@ -18,26 +18,28 @@
     <main class="container">
       <div class="cart">
         <div class="product">
-          <div class="product-info">
-            <section>
-              <img
-                src="<%=produto.image%>"
-                alt="Placa de vídeo" />
-              <p class="product-name">
-                <%=produto.name%>
-              </p>
-            </section>
-            <section class="bottom-section">
-              <p>
-                Quantidade
-              </p>
-                <button ><span class="material-symbols-outlined" data-button="+"> add </span></button>
-                <input data-quantity value="1" disabled></input>
-                <button ><span class="material-symbols-outlined" data-button="-"> remove </span></button>
-              
-              <span id="precoProduto">R$ <%=produto.price.toLocaleString('pt-BR', {minimumFractionDigits: 2})%></span>
-            </section>
-          </div>
+          <% produtos.forEach(produto => { %>
+            <div class="product-info">
+              <section>
+                <img
+                  src="<%=produto.image%>"
+                  alt="Placa de vídeo" />
+                <p class="product-name">
+                  <%=produto.name%>
+                </p>
+              </section>
+              <section class="bottom-section">
+                <p>
+                  Quantidade
+                </p>
+                  <button ><span class="material-symbols-outlined" data-button="+"> add </span></button>
+                  <input data-quantity value="1" disabled></input>
+                  <button ><span class="material-symbols-outlined" data-button="-"> remove </span></button>
+                
+                <span id="precoProduto">R$ <%=produto.price.toLocaleString('pt-BR', {minimumFractionDigits: 2})%></span>
+              </section>
+            </div>
+         <% }) %>
         </div>
         <div class="price-info">
           <li class="info">
@@ -61,7 +63,7 @@
             <p id="precoFinal">R$ <%=produto.price%></p>
           </li>
           <a href="/"><button class="add-more">Escolher mais produtos</button></a>
-          <form action="/carrinho/<%=produto.id%>" method="POST">
+          <form action="/finalizacaoDaCompra/<%=produto.id%>" method="POST">
             <button class="finish" type="submit">FINALIZAR</button>
           </form>
         </div>

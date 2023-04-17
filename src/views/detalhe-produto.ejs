@@ -32,7 +32,9 @@
               </div>
               <div>
                 <span>Adicionar</span>
-                <a href="/carrinho/<%=produto.id%>"><img src="../image/shopping-cart.png" alt="" /></a>
+                <form action="/carrinho/<%=produto.id%>" method="POST">
+                  <button type="submit"><img src="../image/shopping-cart.png" alt="" /></button>
+                </form>
               </div>
             </div>
             <div class="prod-inst">

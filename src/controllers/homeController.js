@@ -38,6 +38,20 @@ const homeController = {
         res.render('carrinho', { produto })
     },
 
+    carrinhoInfo: async (req, res) => {
+        const { id } = req.params
+
+        const produtoInfo = await Product.findByPk(id)
+
+        if (produtoInfo) {
+            req.session.produto = [produtoInfo]
+        }
+
+        let produtos = [...req.session.produto]
+
+        res.render('carrinho', { produtos, produtoInfo })
+    },
+
     saleInfo: async (req, res) => {
 
         const { id } = req.params
