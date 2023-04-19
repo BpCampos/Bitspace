@@ -190,9 +190,11 @@ const homeController = {
         return res.render('Pagina-Login', { errors: { msg: "Email ou senha inválidos" } })
     },
 
-    showPainelDoUsuario: (req, res) => {
+    showPainelDoUsuario: async (req, res) => {
 
-        res.render('painelDoUsuario', { userLogged: req.session.userLogged, adminLogged: req.session.adminLogged })
+        const user = await Client.findByPk(req.session.userLogged.id)
+
+        res.render('painelDoUsuario', { userLogged: req.session.userLogged, adminLogged: req.session.adminLogged, user })
 
     },
     logout: (req, res) => {

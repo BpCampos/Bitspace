@@ -67,18 +67,13 @@
           <div class="carousel-item active text-center">
             <img class="w-25 p-3" src="image/1679241360550.jpg" alt="First slide" />
           </div>
+          <% produtos.slice(0,4).forEach(produto => { %>
           <div class="carousel-item text-center">
-            <img class="w-25 p-3" src="image/1679241388201.jpg" alt="Second slide" />
+            <a href="detalhe-produto/<%=produto.id%>"
+              ><img class="w-25 p-3" src="<%=produto.image%>" alt="Second slide"
+            /></a>
           </div>
-          <div class="carousel-item text-center">
-            <img class="w-25 p-3" src="image/1679241291970.jpg" alt="Third slide" />
-          </div>
-          <div class="carousel-item text-center">
-            <img class="w-25 p-3" src="image/1679241225423.jpg" alt="Third slide" />
-          </div>
-          <div class="carousel-item text-center">
-            <img class="w-25 p-3" src="image/1679241443494.jpg" alt="Third slide" />
-          </div>
+          <% }) %>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
