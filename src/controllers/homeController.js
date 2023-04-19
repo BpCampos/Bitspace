@@ -133,9 +133,11 @@ const homeController = {
 
     createAdmin: async (req, res) => {
 
-        const { name, email, password } = req.body
+        const hashedPassword = bcrypt.hashSync(req.body.password, 12)
 
-        await Admin.create({ name, email, password, isAdmin: true })
+        const { name, email } = req.body
+
+        await Admin.create({ name, email, password: hashedPassword, isAdmin: true })
 
         return res.redirect('/Pagina-Login')
 
@@ -172,7 +174,7 @@ const homeController = {
                 res.cookie('userEmail', req.body.email, { maxAge: (1000) * 60 * 30 });
             }
 
-            return res.redirect('/painelDoUsuario')
+            return res.redirect('/')
 
         }
 
