@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/lista-produtos.css" />
-    <title>Home</title>
+    <title>Lista produtos</title>
   </head>
   <body>
     <%- include('../components/header.ejs') %>
-<main class="container">
+    <main class="container">
       <nav class="navigation">
         <a href="/listagem-produtos/1"><div>Computador</div></a>
         <a href="/listagem-produtos/2"><div>Periféricos</div></a>
@@ -18,33 +18,31 @@
         <a href="/listagem-produtos/4"><div>Componentes</div></a>
       </nav>
 
-<div class="produtos">
-  <div class="side-bar">
-    <a href="/auth/cadastro-produto"><p>Criar produto</p></a>
-  </div>
-  <div class="listagem-produtos">
-      <ul class="row-top">
-        <% produtos.forEach(produto => { %>
-        <li class="product-top">
-            <div class="product-top-img">
-            <img src=<%=produto.image%> alt="" />
+      <div class="produtos">
+        <div class="side-bar">
+          <a href="/auth/cadastro-produto"><p>Criar produto</p></a>
+        </div>
+        <ul class="listagem-produtos">
+          <% produtos.forEach(produto => { %>
+          <li class="product-top">
+            <div class="product-info">
+              <img src="<%=produto.image%>" alt="" />
+              <p><%= produto.name%></p>
+              <div class="price"><%=produto.price%>R$</div>
             </div>
-          <div class="product-top-info">
-            <p><%= produto.name%></p>
-            <p><%=produto.description%></p>
-          </div>
-          <div class="price"><%=produto.price%>R$</div>
-          <div class="product-buttons">
-            <form class="product-top-button" method="POST" action="/auth/lista-produtos/<%=produto.id%>/delete?_method=DELETE" >
-              <button>Excluir</button>
-            </form>
-            <a class="product-top-button" href="/auth/alterar-produto/<%=produto.id%>"><button>Alterar</button></a>
-          </div>  
-        </li>
-        <% }) %>
-  </div>
-
-</div>
+            <div class="product-buttons">
+              <form
+                class="product-top-button"
+                method="POST"
+                action="/auth/lista-produtos/<%=produto.id%>/delete?_method=DELETE">
+                <button>Excluir</button>
+              </form>
+              <a class="product-top-button" href="/auth/alterar-produto/<%=produto.id%>"><button>Alterar</button></a>
+            </div>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
     </main>
 
     <%- include('../components/footer.ejs') %>
