@@ -32,17 +32,21 @@
             </div>
             <div class="product-buttons">
               <form
+                id="delete"
                 class="product-top-button"
                 method="POST"
                 action="/auth/lista-produtos/<%=produto.id%>/delete?_method=DELETE">
                 <button>Excluir</button>
               </form>
-              <a class="product-top-button" href="/auth/alterar-produto/<%=produto.id%>"><button>Alterar</button></a>
+              <a id="change" class="product-top-button" href="/auth/alterar-produto/<%=produto.id%>"
+                ><button>Alterar</button></a
+              >
             </div>
           </li>
           <% }) %>
         </ul>
       </div>
+      <script src="../../js/confirmation.js"></script>
     </main>
 
     <%- include('../components/footer.ejs') %>
