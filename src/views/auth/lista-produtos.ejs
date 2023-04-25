@@ -28,7 +28,7 @@
             <div class="product-info">
               <img src="<%=produto.image%>" alt="" />
               <p><%= produto.name%></p>
-              <div class="price"><%=produto.price%>R$</div>
+              <div class="price"><%=produto.price.toLocaleString('pt-BR', {minimumFractionDigits: 2})%>R$</div>
             </div>
             <div class="product-buttons">
               <form

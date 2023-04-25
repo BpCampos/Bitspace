@@ -17,7 +17,7 @@ main {
   border: 1px solid #9b9b9b;
   box-shadow: 2px 2px 7px 1px rgba(241, 86, 247, 0.116);
   padding: 30px;
-  background-color: #514867;
+  background-color: var(--bg-color);
 }
 
 .input-cadastro input {
@@ -67,6 +67,7 @@ main {
 
 .checkbox-cadastro {
   font-family: "Roboto", sans-serif;
+  color: var(--text-color);
 }
 
 .input-cadastro ::placeholder {

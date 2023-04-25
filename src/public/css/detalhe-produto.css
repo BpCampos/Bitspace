@@ -56,6 +56,8 @@ main {
   text-align: center;
   font-size: 1.5rem;
   padding: 5px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .prod-price {

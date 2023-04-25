@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
+:root {
+  --bg-color: #301f5c;
+  --text-color: white;
+}
+
 /* Header */
 .container {
   max-width: 1920px;
